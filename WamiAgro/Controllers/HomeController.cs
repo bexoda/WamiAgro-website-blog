@@ -18,6 +18,11 @@ namespace WamiAgro.Controllers
             return View();
         }
 
+        public IActionResult WhoWeAre()
+        {
+            return View();
+        }
+
         public IActionResult Team()
         {
             return View();
