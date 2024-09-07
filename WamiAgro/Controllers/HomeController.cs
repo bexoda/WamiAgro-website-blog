@@ -27,6 +27,20 @@ namespace WamiAgro.Controllers
         {
             return View();
         }
+        
+        public IActionResult FarmManagement()
+        {
+            return View();
+        }
+        
+        public IActionResult WhatWeDo()
+        {
+            return View();
+        }
+        public IActionResult Social()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
