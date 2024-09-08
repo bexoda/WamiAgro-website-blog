@@ -2,24 +2,321 @@
     ViewData["Title"] = "Team Management";
 }
 
+<!--====== BANNER PART START ======-->
 
-<section class="page-title-area bg_cover d-flex align-items-center" style="background-image: url(assets/images/page-bg.jpg)">
+<section class="banner-area banner-3-area">
+    <div class="banner-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="banner-content">
+                        <span data-animation="fadeInLeft" data-delay="0.2s">
+                            Our services are delivered using our
+                            proprietary digital platform
+                        </span>
+                        <h1 data-animation="fadeInLeft" data-delay="0.5s" class="title">Pukpara</h1>
+                        <p data-animation="fadeInLeft" data-delay="0.8s">
+                            Streamlines and Enhances the efficiency of our operations.
+                        </p>
+                        <ul data-animation="fadeInUp" data-delay="1.2s">
+                            <!-- <li><a href="#" class="main-btn">About Pukpara <i class="far fa-plus"></i></a></li>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--====== BANNER PART ENDS ======-->
+<!--====== ABOUT US PART START ======-->
+
+<section class="about-us-3-area pb-130">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="page-title-content">
-                    <h3 class="title">Farm Management</h3>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Farm Management</li>
-                        </ol>
-                    </nav>
+        <div class="row justify-content-end">
+            <div class="col-lg-6 col-md-8">
+                <div class="about-us-content">
+
+                    <h3 class="title">About Pukpara</h3>
+                    <p>
+                        Pukpara plays a pivotal role in streamlining and enhancing the efficiency of our operations.
+                        The system integrates various aspects of farm management, providing a comprehensive solution
+                        for both WamiAgro and the smallholder farmers we serve.
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="far fa-check-circle"></i> Farm management and monitoring system
+                        </li>
+                        <li>
+                            <i class="far fa-check-circle"></i> VSLA (Village Savings and Loan Association) and
+                            Input finance
+                        </li>
+                        <li><i class="far fa-check-circle"></i> Voice messaging</li>
+                        <li><i class="far fa-check-circle"></i> Market Place</li>
+                    </ul>
+                    <a class="main-btn" href="https://pukpara.com/auth/sign-in">
+                        Go To Pukpara <i class="far fa-arrow-alt-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--====== ABOUT US PART ENDS ======-->
+<!--====== WHAT WE DO PART START ======-->
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    .feature-class {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+</style>
+
+<section class="what-we-do-area">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-8">
+                <div class="section-title text-center">
+                    <h3 class="title">Features</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="what-we-do-item text-center mt-30">
+                    <img class="feature-class" src="~/assets/images/farmer.png" />
+                    <h4 class="title">Farm management and monitoring system</h4>
+                    <p>
+                        Our farm management system effectively digitizes...
+                    </p>
+                    <a href="#" class="read-more" data-content="Our farm management system effectively digitizes and centralizes critical farm data, offering real-time insights into the agricultural activities of the farmers. This includes information on crop cycles, resource utilization, and yield forecasts. The system provides a comprehensive overview of farm operations, enabling better decision-making and resource allocation.">read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="what-we-do-item text-center mt-30">
+                    <img class="feature-class" src="~/assets/images/investment.gif" />
+                    <h4 class="title">VSLA and Input Finance</h4>
+                    <p>
+                        VSLA (Village Savings and Loan Association) and input finance ...
+                    </p>
+                    <a href="#" class="read-more" data-content="VSLA (Village Savings and Loan Association) and input finance is a comprehensive system that manages farm input distribution and offers basic financial management for smallholder farmers. This system allows farmers to save money towards upcoming agricultural production cycles, fostering financial discipline among farmers and providing a financial safety net for future input purchases. It helps in building financial resilience and ensures timely access to essential farming inputs.">read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="what-we-do-item text-center mt-30">
+                    <img class="feature-class" src="~/assets/images/voice-record.gif" />
+                    <h4 class="title">Voice Messaging</h4>
+                    <p>
+                        The voice messaging system is equipped ...
+                    </p>
+                    <a href="#" class="read-more" data-content="The voice messaging system is equipped with Voice over Internet Protocol (VoIP) technology disseminating crucial weather information to farmers. Farmers receive high-quality voice messages in their local dialects, overcoming potential barriers such as language or literacy limitations. Access to real-time weather updates empowers farmers to make informed decisions about their farming activities, potentially increasing yield and reducing crop losses due to adverse weather conditions.">read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="what-we-do-item text-center mt-30">
+                    <img class="feature-class" src="~/assets/images/marketplace.gif" />
+                    <h4 class="title">Marketplace</h4>
+                    <p>
+                        This feature empowers field agents and aggregators ...
+                    </p>
+                    <a href="#" class="read-more" data-content="This feature empowers field agents and aggregators by providing them with a real-time platform for market and inventory management. Aggregators showcase available produce with quality specifications, allowing for transparent and immediate transactions. This system offers a dynamic marketplace that fosters collaboration and engagement among stakeholders. It helps in reducing post-harvest losses, improving market access for farmers, and creating a more efficient supply chain.">read more</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Modal -->
+<div id="readMoreModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalContent"></p>
+    </div>
+</div>
+
+<!--====== WHAT WE DO PART ENDS ======-->
+<!--====== FARMERS PART START ======-->
+@* <section class="farmers-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="section-title text-center">
+                    <span>Our Farmers</span>
+                    <h3 class="title">Meet Our Honorable Hard Workers</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row farmers-active">
+            <div class="col-lg-3">
+                <div class="farmers-item mt-30">
+                    <img src="~/assets/images/farmers-1.jpg" alt="farmers">
+                    <div class="farmers-overlay">
+                        <div class="item">
+                            <h4 class="title">Brian McCandless</h4>
+                            <span>Organic Farmers</span>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="farmers-item mt-30">
+                    <img src="~/assets/images/farmers-2.jpg" alt="farmers">
+                    <div class="farmers-overlay">
+                        <div class="item">
+                            <h4 class="title">Brian McCandless</h4>
+                            <span>Organic Farmers</span>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="farmers-item mt-30">
+                    <img src="~/assets/images/farmers-3.jpg" alt="farmers">
+                    <div class="farmers-overlay">
+                        <div class="item">
+                            <h4 class="title">Brian McCandless</h4>
+                            <span>Organic Farmers</span>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="farmers-item mt-30">
+                    <img src="~/assets/images/farmers-4.jpg" alt="farmers">
+                    <div class="farmers-overlay">
+                        <div class="item">
+                            <h4 class="title">Brian McCandless</h4>
+                            <span>Organic Farmers</span>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="farmers-item mt-30">
+                    <img src="~/assets/images/farmers-2.jpg" alt="farmers">
+                    <div class="farmers-overlay">
+                        <div class="item">
+                            <h4 class="title">Brian McCandless</h4>
+                            <span>Organic Farmers</span>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ *@
+<!--====== FARMERS PART ENDS ======-->
+
+
+
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("readMoreModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Get all read more links
+    var readMoreLinks = document.getElementsByClassName("read-more");
+
+    // When the user clicks on a read more link, open the modal
+    for (var i = 0; i < readMoreLinks.length; i++) {
+        readMoreLinks[i].onclick = function (e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            document.getElementById("modalTitle").innerText = this.parentElement.querySelector(".title").innerText;
+            document.getElementById("modalContent").innerText = this.getAttribute("data-content");
+        }
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
 
