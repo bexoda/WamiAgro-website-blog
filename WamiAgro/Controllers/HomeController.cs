@@ -27,12 +27,12 @@ namespace WamiAgro.Controllers
         {
             return View();
         }
-        
+
         public IActionResult FarmManagement()
         {
             return View();
         }
-        
+
         public IActionResult WhatWeDo()
         {
             return View();
