@@ -20,6 +20,9 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//app.UseExceptionHandler("/Home/Error");
+app.UseStatusCodePagesWithReExecute("/Home/Error", "?statusCode={0}");
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
