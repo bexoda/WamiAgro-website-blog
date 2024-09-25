@@ -803,7 +803,7 @@ Search Overlay CSS
 .header-info {
   background: #02060e; }
   .header-info .header-info-item {
-    height: 120px;
+    height: fit-content;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -813,7 +813,7 @@ Search Overlay CSS
     justify-content: space-between; }
     @media (max-width: 767px) {
       .header-info .header-info-item .logo img {
-        width: 70%; } }
+        width: 50%; } }
     @media only screen and (min-width: 576px) and (max-width: 767px) {
       .header-info .header-info-item .logo img {
         width: auto; } }
@@ -1261,7 +1261,7 @@ Search Overlay CSS
     3.BANNER css 
 ===========================*/
 .banner-area .banner-item {
-  height: 850px;
+  height: 700px;
   position: relative;
   display: -webkit-flex;
   display: -moz-flex;
