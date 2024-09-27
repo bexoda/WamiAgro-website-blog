@@ -4778,7 +4778,7 @@ Search Overlay CSS
   padding-top: 121px;
   position: relative;
   z-index: 10; }
-  .about-us-3-area::before {
+  /* .about-us-3-area::before {
     position: absolute;
     content: '';
     left: 0;
@@ -4788,7 +4788,7 @@ Search Overlay CSS
     background-image: url(../images/banner-bg-5.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat; } */
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .about-us-3-area::before {
         width: 42%; } }
