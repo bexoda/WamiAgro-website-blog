@@ -2,16 +2,17 @@
     ViewData["Title"] = "WhoWeAre";
 }
 
-<section class="page-title-area bg_cover d-flex align-items-center" style="background-image: url(/assets/images/page-bg.jpg)">
+<!--====== PAGE TITLE AREA START ======-->
+<section class="page-title-area bg_cover d-flex align-items-center" style="background-image: url(/assets/images/page-bg.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="page-title-content">
-                    <h3 class="title">Who We Are</h3>
+                <div class="page-title-content text-white">
+                    <h3 class="title animated fadeInLeft">Who We Are</h3>
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Who we are</li>
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Who We Are</li>
                         </ol>
                     </nav>
                 </div>
@@ -19,127 +20,182 @@
         </div>
     </div>
 </section>
-
+<!--====== PAGE TITLE AREA ENDS ======-->
+<!--====== ABOUT US PART START ======-->
+<section class="about-us-3-area pb-130">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-lg-12 col-md-8">
+                <div class="about-us-content">
+                    <span class="section-subtitle">About Us</span>
+                    <h3 class="title">We Support Production and Distribution</h3>
+                    <p>
+                        Defining the GapWami Agro Limited is a Ghana-based agritech company working hard to turn smallholder farmers into stewards of high-production, yet sustainable land.
+                        Founded in March 2020, WamiAgro provides input credit, access to fair trade markets and prices, and education that increases knowledge and resilience among farmers, thereby reducing shocks to supply chains and providing a steadier source of income to thousands of families.
+                        With a network of over 14,000 farmers across 6 regions in Ghana, WamiAgro supports the production and distribution of rice, maize, soya beans, sorghum, vegetables, and root tubers.
+                        We provide quality and wholesome produce to FMCGs, Bulk Food Distributors, Animal Feed Processors, and Food Service Businesses within and beyond Ghana. We guarantee traceability of all produce sold.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== ABOUT US PART ENDS ======-->
 <!--====== FEATURES 3 ITEM PART START ======-->
-
 <section class="features-3-item-area pb-130 pt-120">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-7 col-md-8">
                 <div class="section-title text-center">
-                    <span>Who we are</span>
-                    <h3 class="title">We guarantee traceability of all produce sold.</h3>
+                    <span class="section-subtitle">Who We Are</span>
+                    <h3 class="title">We Guarantee Traceability of All Produce Sold</h3>
                 </div>
             </div>
         </div>
         <div class="row">
+            <!-- Mission -->
             <div class="col-lg-6 col-md-7 col-sm-9">
-                <div class="features-items">
-                    <div class="item mt-30">
-
-                        <img src="~/assets/images/mission.png"></img>
-                        <h4 class="title">Misson</h4>
-                        <p>To make wholesome food ingredients available, accessible and affordable to factories, FMCG companies and food distributors while ensuring fair trade.</p>
-
+                <div class="features-items text-center mt-30">
+                    <div class="item hover-effect">
+                        <img src="~/assets/images/mission.png" alt="Mission" class="img-fluid mb-3" />
+                        <h4 class="title">Mission</h4>
+                        <p>To make wholesome food ingredients available, accessible, and affordable to factories, FMCG companies, and food distributors while ensuring fair trade.</p>
                     </div>
                 </div>
             </div>
+            <!-- Vision -->
             <div class="col-lg-6 col-md-7 col-sm-9">
-                <div class="features-items">
-                    <div class="item mt-30">
-
-                        <img src="~/assets/images/vision.png"></img>
+                <div class="features-items text-center mt-30">
+                    <div class="item hover-effect">
+                        <img src="~/assets/images/vision.png" alt="Vision" class="img-fluid mb-3" />
                         <h4 class="title">Vision</h4>
-                        <p>To be a leading company driving sustainable food production and supply in Africa.</p>
-
+                        <p>To drive sustainable food production and supply in Africa.</p>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
-
 <!--====== FEATURES 3 ITEM PART ENDS ======-->
-<!--====== ABOUT US PART START ======-->
-
-<section class="about-us-3-area pb-130">
-    <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-lg-6 col-md-8">
-                <div class="about-us-content">
-                    <span>About Us</span>
-                    <h3 class="title">We Support Production and Distribution</h3>
-                    <p>
-                        Wami Agro Limited is a Ghana-based agritech company working hard to close the gap by turning smallholder farmers into stewards of high-production, yet sustainable land.
-                        Founded in March 2020, WamiAgro provides credit, access to fair trade markets and prices, and education that increases knowledge and resilience among farmers, thereby lessening shocks to supply chains and providing a steadier source of income to thousands of families.
-                        With a network of over 14,000 farmers across 6 regions in Ghana, WamiAgro supports the production and distribution of rice, maize, soya beans, sorghum, vegetables and root tubers.
-                        We provide quality and wholesome food ingredients (produce) to FMCGs, Bulk Food Distributors, Animal Feed Processors and Food Service Businesses within and beyond Ghana. We guarantee traceability of all produce sold.
-                    </p>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="about-shape text-right">
-        <img src="assets/images/shape/shape-5.png" alt="shape">
-    </div>
-</section>
-
-<!--====== ABOUT US PART ENDS ======-->
 <!--====== WHAT WE DO PART START ======-->
-
 <section class="what-we-do-area">
     <div class="container position-relative">
         <div class="row justify-content-center">
             <div class="col-lg-7 col-md-8">
                 <div class="section-title text-center">
-                    <span>Our Values</span>
+                    <span class="section-subtitle">Our Values</span>
                     <h3 class="title">Why Choose Wami Agro</h3>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center">
+            <!-- Transparency -->
             <div class="col-lg-4 col-md-6 col-sm-8">
-                <div class="what-we-do-item text-center mt-30">
-
-                    <img src="~/assets/images/transparency.png" />
+                <div class="what-we-do-item text-center mt-30 hover-zoom">
+                    <img src="~/assets/images/transparency.png" alt="Transparency" class="img-fluid mb-3" />
                     <h4 class="title">Transparency</h4>
-                    <p>But I must explain to you how all this mistaken idea denouncing pleasure and praising pain was born give</p>
-
+                    <p>Open communication and clear information sharing.</p>
                 </div>
             </div>
+            <!-- Respect -->
             <div class="col-lg-4 col-md-6 col-sm-8">
-                <div class="what-we-do-item text-center mt-30">
-
-                    <img src="~/assets/images/communication.png" />
+                <div class="what-we-do-item text-center mt-30 hover-zoom">
+                    <img src="~/assets/images/communication.png" alt="Respect" class="img-fluid mb-3" />
                     <h4 class="title">Respect</h4>
-                    <p>But I must explain to you how all this mistaken idea denouncing pleasure and praising pain was born give</p>
-
+                    <p>Acknowledging the inherent worth of every individual and their contributions to our success.</p>
                 </div>
             </div>
+            <!-- Continuous Learning -->
             <div class="col-lg-4 col-md-6 col-sm-8">
-                <div class="what-we-do-item text-center mt-30">
-
-                    <img src="~/assets/images/continuous-learning.png" />
+                <div class="what-we-do-item text-center mt-30 hover-zoom">
+                    <img src="~/assets/images/continuous-learning.png" alt="Continuous Learning" class="img-fluid mb-3" />
                     <h4 class="title">Continuous Learning</h4>
-                    <p>But I must explain to you how all this mistaken idea denouncing pleasure and praising pain was born give</p>
-
+                    <p>Each challenge is seen as an opportunity for learning and improvement.</p>
                 </div>
             </div>
+            <!-- Perseverance -->
             <div class="col-lg-4 col-md-6 col-sm-8">
-                <div class="what-we-do-item text-center mt-30">
-
-                    <img src="~/assets/images/perseverance.png" />
+                <div class="what-we-do-item text-center mt-30 hover-zoom">
+                    <img src="~/assets/images/perseverance.png" alt="Perseverance" class="img-fluid mb-3" />
                     <h4 class="title">Perseverance</h4>
-                    <p>But I must explain to you how all this mistaken idea denouncing pleasure and praising pain was born give</p>
-
+                    <p>Resilient, resourceful, and driven, persistent effort and adapting to change.</p>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
-
 <!--====== WHAT WE DO PART ENDS ======-->
+<!--====== ADDITIONAL ENHANCEMENTS ======-->
+<!-- Include Animate.css for animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<!-- Include AOS (Animate On Scroll) for scroll animations -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1200,
+    });
+</script>
+
+<style>
+    /* General Enhancements */
+    .section-subtitle {
+        color: #27ae60;
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    /* Hover Effects */
+    .hover-effect:hover {
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .hover-zoom img {
+        transition: transform 0.3s ease;
+    }
+
+    .hover-zoom:hover img {
+        transform: scale(1.05);
+    }
+
+    /* Breadcrumb Styling */
+    .breadcrumb {
+        background: transparent;
+        justify-content: center;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        color: #fff;
+    }
+
+    .breadcrumb-item a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .breadcrumb-item.active {
+        color: #fff;
+    }
+
+    /* Responsive Adjustments */
+    @@media (max-width: 768px) {
+        .page-title-content {
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 1.8rem;
+        }
+    }
+</style>
