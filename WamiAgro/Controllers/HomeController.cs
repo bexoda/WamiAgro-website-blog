@@ -47,6 +47,10 @@ namespace WamiAgro.Controllers
             return View();
         }
 
+        public IActionResult Blog()
+        {
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
