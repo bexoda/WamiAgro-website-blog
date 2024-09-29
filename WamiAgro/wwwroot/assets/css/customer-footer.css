@@ -1,0 +1,106 @@
+﻿/* custom-footer.css */
+
+/* Reduce padding for the entire footer */
+.footer-area {
+    padding-top: 20px; /* Reduced from original */
+    padding-bottom: 20px; /* Reduced from original */
+    background-color: #f8f9fa; /* Optional: Change footer background color */
+}
+
+    /* Reduce padding for footer-top */
+    .footer-area .footer-top {
+        padding: 10px 0; /* Reduced from original */
+    }
+
+    /* Adjust footer content sections */
+    .footer-area .footer-content,
+    .footer-area .footer-list,
+    .footer-area .footer-info {
+        padding: 10px 0; /* Reduced padding */
+        margin-bottom: 15px; /* Reduced bottom margin */
+    }
+
+    /* Reduce font sizes */
+    .footer-area h4.title,
+    .footer-area h3.title {
+        font-size: 16px; /* Smaller font size */
+        margin-bottom: 10px; /* Less spacing below titles */
+    }
+
+    .footer-area p {
+        font-size: 14px; /* Smaller font size */
+        line-height: 1.5; /* Adjusted line height for readability */
+    }
+
+    .footer-area ul li a {
+        font-size: 14px; /* Smaller font size for links */
+    }
+
+    /* Optimize image sizes */
+    .footer-area .footer-logo img {
+        max-width: 150px; /* Reduced logo size */
+        height: auto;
+    }
+
+    .footer-area .social-list li a i {
+        font-size: 16px; /* Smaller social icons */
+        margin-right: 5px; /* Less spacing after icons */
+    }
+
+    /* Adjust footer menu */
+    .footer-area .footer-menu ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+        .footer-area .footer-menu ul li {
+            display: inline-block;
+            margin-right: 15px; /* Adjusted spacing between menu items */
+        }
+
+            .footer-area .footer-menu ul li:last-child {
+                margin-right: 0;
+            }
+
+    /* Reduce spacing in footer-bottom */
+    .footer-area .footer-copyright {
+        padding: 10px 0; /* Reduced padding */
+    }
+
+    .footer-area .footer-copyright-content p,
+    .footer-area .footer-copyright-content ul {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    /* Optional: Reduce spacing between copyright text and links */
+    .footer-area .footer-copyright-content ul {
+        margin-left: auto;
+    }
+
+        .footer-area .footer-copyright-content ul li {
+            display: inline-block;
+            margin-left: 15px; /* Adjusted spacing */
+        }
+
+            .footer-area .footer-copyright-content ul li a {
+                font-size: 14px; /* Smaller font size */
+            }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-area .footer-logo img {
+        max-width: 120px; /* Smaller logo on mobile */
+    }
+
+    .footer-area .social-list li a i {
+        font-size: 14px; /* Smaller icons on mobile */
+    }
+
+    .footer-area h4.title,
+    .footer-area h3.title,
+    .footer-area p,
+    .footer-area ul li a {
+        font-size: 13px; /* Further reduce font size on small screens */
+    }
+}

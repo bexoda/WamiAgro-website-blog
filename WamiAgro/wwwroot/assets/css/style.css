@@ -1347,7 +1347,7 @@ Search Overlay CSS
 .banner-area.banner-3-area .banner-item {
   background: #f7f9ff; }
   .banner-area.banner-3-area .banner-item::before {
-    background-image: url(../images/banner-bg-4.jpg);
+    background-image: url(../images/pukpara/pukpara.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
