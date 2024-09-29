@@ -157,7 +157,7 @@
                     <div class="col-lg-12">
                         <div class="header-info-item">
                             <div class="logo">
-                                <a href="index-2.html"><img src="~/assets/images/logo.png" alt="logo"></a>
+                                <a asp-controller="Home" asp-action="Index"><img src="~/assets/images/logo.png" alt="logo"></a>
                             </div>
                             <div class="header-info d-lg-flex d-none">
                                 <div class="item">
@@ -321,10 +321,10 @@
                     <div class="footer-list">
                         <h4 class="title">Quick Links</h4>
                         <ul>
-                            <li><a href="#"><i class="far fa-long-arrow-right"></i> Our Services</a></li>
-                            <li><a href="#"><i class="far fa-long-arrow-right"></i> About Company</a></li>
-                            <li><a href="#"><i class="far fa-long-arrow-right"></i> Meet The Team</a></li>
-                            <li><a href="#"><i class="far fa-long-arrow-right"></i> Our Products</a></li>
+                            <li><a asp-controller="Home" asp-action="WhatWeDo"><i class="far fa-long-arrow-right"></i> Our Services</a></li>
+                            <li><a asp-controller="Home" asp-action="WhoWeAre"><i class="far fa-long-arrow-right"></i> About Us</a></li>
+                            <li><a asp-controller="Home" asp-action="Team"><i class="far fa-long-arrow-right"></i> Meet The Team</a></li>
+                            @* <li><a href="#"><i class="far fa-long-arrow-right"></i> Our Products</a></li> *@
                         </ul>
                     </div>
                 </div>
@@ -333,10 +333,10 @@
                     <div class="footer-list footer-list-2">
                         <h4 class="title">Services</h4>
                         <ul>
-                            <li><a href="#"><i class="far fa-long-arrow-right"></i> Pukpara</a></li>
-                            <li><a href="#"><i class="far fa-long-arrow-right"></i> Schedule a Demo</a></li>
-                            <li><a href="#"><i class="far fa-long-arrow-right"></i> Get a Call</a></li>
-                            <li><a href="#"><i class="far fa-long-arrow-right"></i> Online Enquiry</a></li>
+                            <li><a asp-controller="Home" asp-action="FarmManagement"><i class="far fa-long-arrow-right"></i> Pukpara</a></li>
+                            @* <li><a href="#"><i class="far fa-long-arrow-right"></i> Schedule a Demo</a></li> *@
+                            @* <li><a href="#"><i class="far fa-long-arrow-right"></i> Get a Call</a></li> *@
+                            @* <li><a href="#"><i class="far fa-long-arrow-right"></i> Online Enquiry</a></li> *@
                         </ul>
                     </div>
                 </div>
@@ -369,11 +369,11 @@
                     <div class="col-lg-12">
                         <div class="footer-copyright-content d-md-flex d-block align-items-center">
                             <p>Copyright © <span>WamiAgro</span> All Rights Reserved</p>
-                            <ul>
+                           @*  <ul>
                                 <li><a href="#">Terms & Conditions</a></li>
                                 <li><a href="#">Privacy Policy</a></li>
                                 <li><a href="#">Sitemap</a></li>
-                            </ul>
+                            </ul> *@
                         </div>
                     </div>
                 </div>
