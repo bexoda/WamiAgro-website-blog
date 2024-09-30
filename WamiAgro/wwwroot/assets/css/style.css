@@ -803,7 +803,7 @@ Search Overlay CSS
 .header-info {
   background: #02060e; }
   .header-info .header-info-item {
-    height: 120px;
+    height: fit-content;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -813,7 +813,7 @@ Search Overlay CSS
     justify-content: space-between; }
     @media (max-width: 767px) {
       .header-info .header-info-item .logo img {
-        width: 70%; } }
+        width: 50%; } }
     @media only screen and (min-width: 576px) and (max-width: 767px) {
       .header-info .header-info-item .logo img {
         width: auto; } }
@@ -1261,7 +1261,7 @@ Search Overlay CSS
     3.BANNER css 
 ===========================*/
 .banner-area .banner-item {
-  height: 850px;
+  height: 700px;
   position: relative;
   display: -webkit-flex;
   display: -moz-flex;
@@ -1347,7 +1347,7 @@ Search Overlay CSS
 .banner-area.banner-3-area .banner-item {
   background: #f7f9ff; }
   .banner-area.banner-3-area .banner-item::before {
-    background-image: url(../images/banner-bg-4.jpg);
+    background-image: url(../images/pukpara/pukpara.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -4778,7 +4778,7 @@ Search Overlay CSS
   padding-top: 121px;
   position: relative;
   z-index: 10; }
-  .about-us-3-area::before {
+  /* .about-us-3-area::before {
     position: absolute;
     content: '';
     left: 0;
@@ -4788,7 +4788,7 @@ Search Overlay CSS
     background-image: url(../images/banner-bg-5.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat; } */
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .about-us-3-area::before {
         width: 42%; } }

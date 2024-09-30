@@ -1,19 +1,113 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-<!--====== HEADER PART ENDS ======-->
-<!--====== PAGE TITLE PART START ======-->
+﻿@{
+    ViewData["Title"] = "WamiAgro | Social and Environmental Impact";
+}
 
-<section class="page-title-area bg_cover d-flex align-items-center"
-         style="background-image: url(/assets/images/page-bg.jpg)">
+<!--====== HEADER PART ENDS ======-->
+
+<!--====== CUSTOM STYLES FOR THIS PAGE ======-->
+<style>
+    /* ======== Card Styles ======== */
+    /* Remove borders from all Bootstrap cards */
+    .card {
+        border: none; /* Removes the border */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        perspective: 1000px;
+        background-color: #fff; /* Ensures a white background */
+    }
+
+    /* Hover Effect for Cards */
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        cursor: pointer; /* Changes cursor to pointer on hover */
+    }
+
+    /* Adjust image sizes within cards */
+    .card-img-top {
+        height: 180px; /* Reduced height from 200px to 180px */
+        object-fit: cover;
+    }
+
+    /* Adjust the stat-icon size */
+    .stat-icon {
+        width: 50px; /* Reduced size from 60px to 50px */
+        height: 50px; /* Reduced size from 60px to 50px */
+    }
+
+    /* Responsive adjustments for stat-icon */
+    @@media (max-width: 767px) {
+        .stat-icon {
+            width: 40px; /* Further reduced for smaller screens */
+            height: 40px;
+        }
+    }
+
+    /* ======== Section Padding Adjustments ======== */
+    /* Reduce padding for sections */
+    .project-details-area {
+        padding-top: 50px !important; /* Reduced from pt-130 */
+        padding-bottom: 50px !important; /* Reduced from pb-130 */
+    }
+
+    .page-title-area {
+        padding-top: 60px !important; /* Adjust as needed */
+        padding-bottom: 60px !important; /* Adjust as needed */
+    }
+
+    /* ======== Partners Section Margin Adjustment ======== */
+    .brand-area {
+        margin-top: 60px; /* Increased top margin */
+        margin-bottom: 60px; /* Increased bottom margin */
+    }
+
+    /* ======== Typography Adjustments ======== */
+    /* Reduce font sizes for titles */
+    .title {
+        font-size: 1.8rem; /* Reduced from default */
+    }
+
+    .card-title {
+        font-size: 1.5rem; /* Reduced from default */
+    }
+
+    .card-text {
+        font-size: 1rem; /* Reduced from default */
+    }
+
+    /* ======== Additional Adjustments ======== */
+    /* Ensure container widths are optimized */
+    .container {
+        max-width: 1140px; /* Bootstrap default, adjust if necessary */
+    }
+
+    /* Optional: Adjust margins between sections */
+    .project-box {
+        margin-bottom: 30px; /* Reduced from mt-30 */
+    }
+
+    /* Optional: Adjust breadcrumb spacing */
+    .breadcrumb {
+        font-size: 0.9rem; /* Smaller breadcrumb text */
+    }
+
+    /* ======== Accessibility Enhancements ======== */
+    .card:focus {
+        outline: none;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    }
+</style>
+<!--====== CUSTOM STYLES FOR THIS PAGE ENDS ======-->
+
+<!--====== HERO SECTION START ======-->
+<section class="page-title-area bg_cover d-flex align-items-center" style="background-image: url(/assets/images/page-bg.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-title-content">
-                    <h3 class="title">Social and Environmental Impact</h3>
+                    <h3 class="title">Empowering Farmers, Securing Food Futures</h3>
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Social and Environmental Impact</li>
                         </ol>
                     </nav>
@@ -22,72 +116,334 @@
         </div>
     </div>
 </section>
+<!--====== HERO SECTION ENDS ======-->
 
-<!--====== PAGE TITLE PART ENDS ======-->
-<!--====== PROJECT DETAILS PART START ======-->
-
-<section class="project-details-area pt-130">
+<!--====== KEY IMPACT SECTION START ======-->
+<section id="impact-section" class="project-details-area">
     <div class="container">
-
         <div class="row">
             <div class="col-lg-12">
-                <div class="project-box mt-30">
+                <div class="project-box">
                     <div class="project-content">
                         <h3 class="title">Our Impact</h3>
                         <p>
-                            Low levels of financial inclusion and market access are fundamental to high levels of
-                            deprivation amongst agricultural communities in rural Ghana. Through the provision of
-                            inputs, market access, and capacity building, we reduce post-harvest losses and increase
-                            productivity, leading to long-run improvements in revenues, reducing poverty and
-                            increasing food security.
+                            WamiAgro works at the intersection of agriculture and empowerment, providing smallholder farmers—particularly women—with access to resources, markets, and knowledge. Through our unique model, we address challenges like low productivity, food insecurity, and limited market access, creating a sustainable and inclusive agricultural ecosystem.
                         </p>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-6">
-                            <div class="project-details-thumb mt-30">
-                                <img src="~/assets/images/project-1.jpg" alt="project">
+
+                    <!-- Impact Statistics Section -->
+                    <div class="row mt-4">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="/assets/images/farmer.gif" alt="Farmers Empowered" class="stat-icon mb-3">
+                                    <h4 class="card-title">13,000+</h4>
+                                    <p class="card-text">Farmers Empowered</p>
+                                </div>
                             </div>
                         </div>
-
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="/assets/images/income.gif" alt="Revenue Generated" class="stat-icon mb-3">
+                                    <h4 class="card-title">GHS 1.5M+</h4>
+                                    <p class="card-text">Revenue Generated</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="/assets/images/wheat.gif" alt="Total Crops Produced" class="stat-icon mb-3">
+                                    <h4 class="card-title">27,000 MT</h4>
+                                    <p class="card-text">Total Crops Produced</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="/assets/images/female-farmer.gif" alt="Female Farmers" class="stat-icon mb-3">
+                                    <h4 class="card-title">55%</h4>
+                                    <p class="card-text">Female Farmers</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="/assets/images/job.gif" alt="Jobs Created" class="stat-icon mb-3">
+                                    <h4 class="card-title">36,000</h4>
+                                    <p class="card-text">Jobs Created</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="/assets/images/windmill.gif" alt="Land Controlled" class="stat-icon mb-3">
+                                    <h4 class="card-title">19,000 hectares</h4>
+                                    <p class="card-text">Land Controlled</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-content-2">
-                        <h4 class="title"> </h4>
-                        <br />
-                        <p>
-                            The benefits of our innovation accrue overwhelmingly to women. Majority of our farmers
-                            are women, who for several years have generally been underserved by traditional credit
-                            systems. Our intervention specifically tackles barriers faced by women, thereby
-                            enhancing gender equality.
-                        </p>
-                    </div>
-                    <br />
-                    <br />
+                    <!-- End of Impact Statistics Section -->
                 </div>
             </div>
-
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="project-box mt-30">
-                    <div class="project-content">
-                        <h3 class="title">Wami Agro at a glance</h3>
-                        <h6>Empowering farmers, nourishing communities, tackling food insecurity together!</h6>
-                    </div>
-
-                    <br />
-                    <br />
-                </div>
-            </div>
-
-            <div class="col-lg-12">
-                <div class="project-details-thumb pb-25">
-                    <img src="~/assets/images/dashboard.png" alt="project">
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
+<!--====== KEY IMPACT SECTION ENDS ======-->
 
-<!--====== PROJECT DETAILS PART ENDS ======-->
-<!--====== FARMS PART START ======-->
+<!--====== VALUE CHAIN AND JOURNEY SECTION START ======-->
+<section class="project-details-area bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="project-box">
+                    <div class="project-content">
+                        <h3 class="title">Our Value Chain: Driving Sustainable Change</h3>
+                        <p>
+                            At WamiAgro, we believe in creating value across every stage of the agricultural process—from providing input credit to capacity building and market linkage. This holistic approach ensures that our farmers not only grow more but earn more while reducing post-harvest losses.
+                        </p>
+                    </div>
+
+                    <!-- Visualized Value Chain -->
+                    <div class="row mt-4">
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="~/assets/images/input-credit.gif" alt="Input Credit" class="mb-3 card-img-top" />
+                                    <h4 class="card-title">Input Credit</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="~/assets/images/market-linkage.gif" alt="Market Linkage" class="mb-3 card-img-top" />
+                                    <h4 class="card-title">Market Linkage</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="~/assets/images/capacity-building.gif" alt="Capacity Building" class="mb-3 card-img-top" />
+                                    <h4 class="card-title">Capacity Building</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <img src="~/assets/images/sustainable-harvest.gif" alt="Sustainable Harvest" class="mb-3 card-img-top" />
+                                    <h4 class="card-title">Sustainable Harvest</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Visualized Value Chain -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== VALUE CHAIN AND JOURNEY SECTION ENDS ======-->
+
+<!--====== SDG ALIGNMENT SECTION START ======-->
+<section class="project-details-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="project-box">
+                    <div class="project-content">
+                        <h3 class="title">Aligned with Global Goals</h3>
+                        <p>
+                            WamiAgro's efforts directly contribute to the United Nations Sustainable Development Goals (SDGs), focusing on key areas such as poverty alleviation, food security, gender equality, and economic growth.
+                        </p>
+
+                        <div class="row mt-4">
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <img src="~/assets/images/sdg1.png" alt="No Poverty" class="mb-3 card-img-top" />
+                                        <h4 class="card-title">SDG 1: No Poverty</h4>
+                                        <p class="card-text">Providing additional income for smallholder farmers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <img src="~/assets/images/sdg2.png" alt="Zero Hunger" class="mb-3 card-img-top" />
+                                        <h4 class="card-title">SDG 2: Zero Hunger</h4>
+                                        <p class="card-text">Increased agricultural yield and production.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <img src="~/assets/images/sdg5.png" alt="Gender Equality" class="mb-3 card-img-top" />
+                                        <h4 class="card-title">SDG 5: Gender Equality</h4>
+                                        <p class="card-text">55% of our farmers are women, enhancing equity.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <img src="~/assets/images/sdg8.png" alt="Decent Work and Economic Growth" class="mb-3 card-img-top" />
+                                        <h4 class="card-title">SDG 8: Decent Work and Economic Growth</h4>
+                                        <p class="card-text">Creating jobs and boosting wages in rural communities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of SDG Cards -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== SDG ALIGNMENT SECTION ENDS ======-->
+
+@* <!--====== SUCCESS STORIES SECTION START ======-->
+<section class="project-details-area bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="project-box">
+                    <div class="project-content">
+                        <h3 class="title">Impact in Action: Stories from the Field</h3>
+                        <p>
+                            Meet the farmers who are transforming their communities through the support of WamiAgro. These stories highlight the personal and community-wide impacts of our work.
+                        </p>
+                    </div>
+
+                    <!-- Farmer Stories -->
+                    <div class="row mt-4">
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="~/assets/images/farmer-story-1.jpg" alt="Farmer Story 1" class="card-img-top" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Abena's Journey</h4>
+                                    <p class="card-text">Abena, a maize farmer in the Ashanti region, doubled her yields in just one year after joining WamiAgro's program, empowering her to send her children to school and expand her farm.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <img src="~/assets/images/farmer-story-2.jpg" alt="Farmer Story 2" class="card-img-top" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Kwame's Success</h4>
+                                    <p class="card-text">Kwame, a rice farmer from Northern Ghana, has seen a 30% increase in his income and now trains others in his community to adopt WamiAgro's best practices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Farmer Stories -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== SUCCESS STORIES SECTION ENDS ======--> *@
+
+<!--====== PARTNERS SECTION START ======-->
+<section class="brand-area">
+    <div class="container">
+        <div class="row brand-active">
+            <!-- Partner 1 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://wangaragreenventures.com/" target="_blank">
+                        <img src="/assets/images/brands/WangaraGreenVenture.png" alt="Wangara Green Venture" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 2 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://www.rdfghana.com/" target="_blank">
+                        <img src="/assets/images/brands/RDFGreen.png" alt="RDF Green" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 3 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://www.absa.com.gh" target="_blank">
+                        <img src="/assets/images/brands/absa.png" alt="Absa Bank" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 4 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://growthafrica.com/" target="_blank">
+                        <img src="/assets/images/brands/growthafrica.png" alt="Growth Africa" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 5 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://cala.agra.org/" target="_blank">
+                        <img src="/assets/images/brands/cala.png" alt="Cala Initiative" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 6 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://www.millersocent.org/" target="_blank">
+                        <img src="/assets/images/brands/Millercentre.png" alt="Miller Centre" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 7 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://www.innohub.com.gh/" target="_blank">
+                        <img src="/assets/images/brands/innohub.png" alt="InnoHub" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 8 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://meltwater.org/mest-scale" target="_blank">
+                        <img src="/assets/images/brands/mestscale.png" alt="MEST Scale" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 9 -->
+            <!-- If you have Partner 9, add here -->
+            <!-- Partner 10 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="#" target="_blank">
+                        <img src="/assets/images/brands/unicorn.png" alt="Unicorn Group" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== PARTNERS SECTION ENDS ======-->
+
+<!--====== FOOTER PART START ======-->
+<!-- Add your footer content here -->
+<!--====== FOOTER PART ENDS ======-->
+
+<!--====== SCRIPTS START ======-->
+<!-- Include jQuery and Bootstrap JS (Assuming Bootstrap is used) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Optional: Include any additional JavaScript here -->
+<!--====== SCRIPTS END ======-->

@@ -1,17 +1,17 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-<!--====== PAGE TITLE PART START ======-->
+﻿@{
+    ViewData["Title"] = "Our Team";
+}
 
-<section class="page-title-area bg_cover d-flex align-items-center" style="background-image: url(/assets/images/page-bg.jpg)">
+<!--====== PAGE TITLE PART START ======-->
+<section class="page-title-area bg_cover d-flex align-items-center" style="background-image: url(/assets/images/page-bg.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="page-title-content">
+                <div class="page-title-content text-white">
                     <h3 class="title">Our Team</h3>
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")" class="text-white">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Our Team</li>
                         </ol>
                     </nav>
@@ -20,67 +20,124 @@
         </div>
     </div>
 </section>
-
 <!--====== PAGE TITLE PART ENDS ======-->
-<!--====== FARMERS PART START ======-->
-
+<!--====== OUR TEAM PART START ======-->
 <section class="farmers-area team-page">
     <div class="container">
+        <!-- New Introductory Paragraph Start -->
         <div class="row">
+            <div class="col-lg-12">
+                <p class="text-center mb-5">
+                    <h5>Our team is a blend of diverse expertise and over 50 years of cumulative experience in agronomy, agricultural engineering and technology, business development, and management.</h5>
+                </p>
+            </div>
+        </div>
+        <!-- New Introductory Paragraph End -->
+        <!-- Directors Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title text-center mb-5">
+                    <h3 class="title">Directors</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Director 1: Caleb Edwards -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30">
-                    <img src="~/assets/images/farmers-1.jpg" alt="farmers">
+                    <img src="@Url.Content("~/assets/images/farmers-1.jpg")" alt="Caleb Edwards" class="img-fluid">
                     <div class="farmers-overlay">
                         <div class="item">
                             <h4 class="title">Caleb Edwards</h4>
                             <span>Managing Director</span>
                             <ul>
+                                <li><a href="https://www.linkedin.com/in/caleb-edwards/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/caleb-edwards/"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul>
+                            <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
+                                    data-name="Caleb Edwards"
+                                    data-title="Managing Director"
+                                    data-qualifications="MSc. BA, FMVA"
+                                    data-experience="Over 10 years of experience in entrepreneurship."
+                                    data-linkedin="https://www.linkedin.com/in/caleb-edwards/"
+                                    data-image="@Url.Content("~/assets/images/farmers-1.jpg")">
+                                View Profile
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Director 2: Jonah Jones Tuokpier -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30">
-                    <img src="~/assets/images/farmers-2.jpg" alt="farmers">
+                    <img src="@Url.Content("~/assets/images/farmers-2.jpg")" alt="Jonah Jones Tuokpier" class="img-fluid">
                     <div class="farmers-overlay">
                         <div class="item">
                             <h4 class="title">Jonah Jones Tuokpier</h4>
                             <span>Executive Director</span>
                             <ul>
+                                <li><a href="https://www.linkedin.com/in/jonah-jones-tuokpier-633908b8/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/jonah-jones-tuokpier-633908b8/"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul>
+                            <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
+                                    data-name="Jonah Jones Tuokpier"
+                                    data-title="Executive Director"
+                                    data-qualifications="MSc. BSc"
+                                    data-experience="Over 10 years of experience in agronomy and agricultural project management."
+                                    data-linkedin="https://www.linkedin.com/in/jonah-jones-tuokpier-633908b8/"
+                                    data-image="@Url.Content("~/assets/images/farmers-2.jpg")">
+                                View Profile
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Managers Section -->
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div class="section-title text-center mb-5">
+                    <h3 class="title">Managers</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Manager 1: Portia Nyarko -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30">
-                    <img src="~/assets/images/farmers-3.jpg" alt="farmers">
+                    <img src="@Url.Content("~/assets/images/farmers-3.jpg")" alt="Portia Nyarko" class="img-fluid">
                     <div class="farmers-overlay">
                         <div class="item">
                             <h4 class="title">Portia Nyarko</h4>
                             <span>Admin & Corporate Affairs Manager</span>
                             <ul>
+                                <li><a href="https://www.linkedin.com/in/portia-nyarko-39667163" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="www.linkedin.com/in/portia-nyarko-39667163"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul>
+                            <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
+                                    data-name="Portia Nyarko"
+                                    data-title="Admin & Corporate Affairs Manager"
+                                    data-qualifications="BA"
+                                    data-experience="8 years of experience in marketing and corporate communications."
+                                    data-linkedin="https://www.linkedin.com/in/portia-nyarko-39667163"
+                                    data-image="@Url.Content("~/assets/images/farmers-3.jpg")">
+                                View Profile
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Manager 2: Marrilyn Addison -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30">
-                    <img src="~/assets/images/farmers-4.jpg" alt="farmers">
+                    <img src="@Url.Content("~/assets/images/farmers-4.jpg")" alt="Marrilyn Addison" class="img-fluid">
                     <div class="farmers-overlay">
                         <div class="item">
                             <h4 class="title">Marrilyn Addison</h4>
@@ -91,30 +148,50 @@
                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                             </ul>
+                            <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
+                                    data-name="Marrilyn Addison"
+                                    data-title="Finance and Accounts Manager"
+                                    data-qualifications="BA, ACCA"
+                                    data-experience="12 years of experience in financial management and accounting."
+                                    data-linkedin="#"
+                                    data-image="@Url.Content("~/assets/images/farmers-4.jpg")">
+                                View Profile
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Manager 3: Seyram Loh-Mensah -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30">
-                    <img src="~/assets/images/farmers-5.jpg" alt="farmers">
+                    <img src="@Url.Content("~/assets/images/farmers-5.jpg")" alt="Seyram Loh-Mensah" class="img-fluid">
                     <div class="farmers-overlay">
                         <div class="item">
                             <h4 class="title">Seyram Loh-Mensah</h4>
                             <span>Business Development Manager</span>
                             <ul>
+                                <li><a href="https://www.linkedin.com/in/seyram-loh-mensah-bsc-msc-52b10538/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/seyram-loh-mensah-bsc-msc-52b10538/"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul>
+                            <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
+                                    data-name="Seyram Loh-Mensah"
+                                    data-title="Business Development Manager"
+                                    data-qualifications="BSc. MSc."
+                                    data-experience="Over 15 years of experience in finance and customer relationship management."
+                                    data-linkedin="https://www.linkedin.com/in/seyram-loh-mensah-bsc-msc-52b10538/"
+                                    data-image="@Url.Content("~/assets/images/farmers-5.jpg")">
+                                View Profile
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Manager 4: Raphael Yaw Hatsu -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30">
-                    <img src="~/assets/images/farmers-6.jpg" alt="farmers">
+                    <img src="@Url.Content("~/assets/images/farmers-6.jpg")" alt="Raphael Yaw Hatsu" class="img-fluid">
                     <div class="farmers-overlay">
                         <div class="item">
                             <h4 class="title">Raphael Yaw Hatsu</h4>
@@ -125,13 +202,23 @@
                                 <li><a href="https://www.linkedin.com/in/angela-adzika-6ab931205/"><i class="fab fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                             </ul>
+                            <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
+                                    data-name="Raphael Yaw Hatsu"
+                                    data-title="Projects Manager"
+                                    data-qualifications="MBA"
+                                    data-experience="10 years of experience in project management and agricultural development."
+                                    data-linkedin="#"
+                                    data-image="@Url.Content("~/assets/images/farmers-6.jpg")">
+                                View Profile
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Manager 5: Priscilla Offei-Asare -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30">
-                    <img src="~/assets/images/farmers-7.jpg" alt="farmers">
+                    <img src="@Url.Content("~/assets/images/farmers-7.jpg")" alt="Priscilla Offei-Asare" class="img-fluid">
                     <div class="farmers-overlay">
                         <div class="item">
                             <h4 class="title">Priscilla Offei-Asare</h4>
@@ -142,30 +229,50 @@
                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                             </ul>
+                            <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
+                                    data-name="Priscilla Offei-Asare"
+                                    data-title="Sustainability Manager"
+                                    data-qualifications="MBA, Certified Sustainability Professional"
+                                    data-experience="7 years of experience in sustainable agricultural practices and corporate sustainability."
+                                    data-linkedin="#"
+                                    data-image="@Url.Content("~/assets/images/farmers-7.jpg")">
+                                View Profile
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Manager 6: Angela Adzika -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30">
-                    <img src="~/assets/images/farmers-8.jpg" alt="farmers">
+                    <img src="@Url.Content("~/assets/images/farmers-8.jpg")" alt="Angela Adzika" class="img-fluid">
                     <div class="farmers-overlay">
                         <div class="item">
                             <h4 class="title">Angela Adzika</h4>
                             <span>Partnerships & Innovations Manager</span>
                             <ul>
+                                <li><a href="https://www.linkedin.com/in/angela-adzika-6ab931205/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                             </ul>
+                            <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
+                                    data-name="Angela Adzika"
+                                    data-title="Partnerships & Innovations Manager"
+                                    data-qualifications="BSc."
+                                    data-experience="Certified food system leader with 9 years' experience in the agriculture space."
+                                    data-linkedin="https://www.linkedin.com/in/angela-adzika-6ab931205/"
+                                    data-image="@Url.Content("~/assets/images/farmers-8.jpg")">
+                                View Profile
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Manager 7: Mawuli Akpey -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30">
-                    <img src="~/assets/images/farmers-8.jpg" alt="farmers">
+                    <img src="@Url.Content("~/assets/images/farmers-8.jpg")" alt="Mawuli Akpey" class="img-fluid">
                     <div class="farmers-overlay">
                         <div class="item">
                             <h4 class="title">Mawuli Akpey</h4>
@@ -176,18 +283,26 @@
                                 <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                             </ul>
+                            <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
+                                    data-name="Mawuli Akpey"
+                                    data-title="Agritech Manager"
+                                    data-qualifications="BSc., MSc."
+                                    data-experience="10 years of experience in agritech solutions and agricultural technology development."
+                                    data-linkedin="#"
+                                    data-image="@Url.Content("~/assets/images/farmers-9.jpg")">
+                                View Profile
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Manager 8: Stephen Dinuwaab -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30">
-                    <img src="~/assets/images/farmers-8.jpg" alt="farmers">
+                    <img src="@Url.Content("~/assets/images/farmers-5.jpg")" alt="Stephen Dinuwaab" class="img-fluid">
                     <div class="farmers-overlay">
                         <div class="item">
-                            <h4 class="title">
-                                Stephen Dinuwaab
-                            </h4>
+                            <h4 class="title">Stephen Dinuwaab</h4>
                             <span>Northern Sector Manager</span>
                             <ul>
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -195,6 +310,15 @@
                                 <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                             </ul>
+                            <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
+                                    data-name="Stephen Dinuwaab"
+                                    data-title="Northern Sector Manager"
+                                    data-qualifications="MBA"
+                                    data-experience="8 years of experience managing agricultural projects and regional operations."
+                                    data-linkedin="#"
+                                    data-image="@Url.Content("~/assets/images/farmers-10.jpg")">
+                                View Profile
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -202,5 +326,201 @@
         </div>
     </div>
 </section>
+<!--====== OUR TEAM PART ENDS ======-->
+<!--====== TEAM MEMBER MODAL ======-->
+<div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="teamModalLabel">Team Member</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
 
-<!--====== FARMERS PART ENDS ======-->
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img src="" alt="" id="modalImage" class="img-fluid rounded mb-3">
+                    </div>
+                    <div class="col-md-8">
+                        <h4 id="modalName"></h4>
+                        <h5 id="modalTitle" class="text-muted"></h5>
+                        <p><strong>Qualifications:</strong> <span id="modalQualifications"></span></p>
+                        <p><strong>Experience:</strong> <span id="modalExperience"></span></p>
+                        <p>
+                            <a href="#" target="_blank" id="modalLinkedIn"><i class="fab fa-linkedin-in"></i> </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--====== TEAM MEMBER MODAL ENDS ======-->
+<!--====== ADDITIONAL SCRIPTS ======-->
+<!-- Include jQuery, Popper.js, and Bootstrap JS if not already included -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Popper.js for Bootstrap 4 -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<script>
+    $(document).ready(function () {
+        $('.view-profile-btn').on('click', function () {
+            // Retrieve data attributes from the clicked button
+            var name = $(this).data('name');
+            var title = $(this).data('title');
+            var qualifications = $(this).data('qualifications');
+            var experience = $(this).data('experience');
+            var linkedin = $(this).data('linkedin');
+            var imageSrc = $(this).data('image');
+
+            // Update modal content
+            $('#teamModalLabel').text(name);
+            $('#modalImage').attr('src', imageSrc).attr('alt', name);
+            $('#modalName').text(name);
+            $('#modalTitle').text(title);
+            $('#modalQualifications').text(qualifications);
+            $('#modalExperience').text(experience);
+            if (linkedin !== "#") {
+                $('#modalLinkedIn').attr('href', linkedin).show();
+            } else {
+                $('#modalLinkedIn').hide();
+            }
+        });
+    });
+</script>
+
+<style>
+    /* Existing Styles */
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .farmers-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .farmers-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .farmers-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+    .farmers-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .farmers-item:hover .farmers-overlay {
+        opacity: 1;
+    }
+
+    .farmers-overlay .item {
+        text-align: center;
+    }
+
+        .farmers-overlay .item .title {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .farmers-overlay .item span {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .farmers-overlay .item ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+            .farmers-overlay .item ul li {
+                margin: 0 5px;
+            }
+
+                .farmers-overlay .item ul li a {
+                    color: #fff;
+                    font-size: 1rem;
+                    transition: color 0.3s ease;
+                }
+
+                    .farmers-overlay .item ul li a:hover {
+                        color: #27ae60;
+                    }
+
+    .view-profile-btn {
+        background-color: #27ae60;
+        border: none;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .view-profile-btn:hover {
+            background-color: #219150;
+        }
+
+    /* Modal Styles */
+    .modal-content {
+        border-radius: 10px;
+    }
+
+    .modal-header {
+        border-bottom: none;
+    }
+
+        .modal-header .close {
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+    .modal-body img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    @@media (max-width: 767px) {
+        .farmers-overlay .item {
+            text-align: center;
+        }
+    }
+
+    /* New Styles for Introductory Paragraph */
+    .farmers-area .row:first-child p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #555;
+    }
+</style>
