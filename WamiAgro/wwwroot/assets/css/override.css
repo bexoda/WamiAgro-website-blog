@@ -1,0 +1,77 @@
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800&amp;display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #686868; }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+
+.customHeader{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: start;
+    padding: 0 2rem;
+    background-color: #02060e;
+}
+
+/* .logo{
+
+} */
+
+.navbar-links{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2rem;
+    color: white;
+}
+
+.nav-item a{
+    color: white;
+}
+
+
+@media only screen  and (max-width: 600px) {
+    .pcNav{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px){
+.hamburgerMenu{
+    display: none;
+}
+.navbar-btns{
+    display: none;
+}
+
+.sub-menu{
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+
+.nav-item{
+    position: relative;
+}
+
+.nav-item:hover .sub-menu {
+    display: block;
+}
+/* .page-scroll:hover.sub-menu li a{
+    opacity: 1;
+    visibility: visible;
+    top: 100%; 
+} */
+
+}

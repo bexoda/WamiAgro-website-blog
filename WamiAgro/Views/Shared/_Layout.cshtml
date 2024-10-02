@@ -42,13 +42,16 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="~/assets/css/style.css">
 
+
+    <link rel="stylesheet" href="/assets/css/override.css">
+
 </head>
 
 <body>
 
     <!--====== Sidebar Modal PART START ======-->
 
-    <div class="sidebar-modal">
+    @* <div class="sidebar-modal">
         <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -141,44 +144,86 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> *@
 
     <!--====== Sidebar Modal PART END ======-->
     <!--====== HEADER PART START ======-->
 
-    <header class="header-area">
+
+
+    <header class="customHeader">
+        <div class="logo">
+            <a asp-asp-controller="Home" asp-action="Index">
+                <img src="/assets/images/logo.png" alt="logo">
+            </a>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+                                <button class="hamburgerMenu" type="button" data-toggle="collapse"
+                                        data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                    <span class="toggler-icon"></span>
+                                    <span class="toggler-icon"></span>
+                                    <span class="toggler-icon"></span>
+                                </button> <!-- navbar toggler -->
+                                <div class="pcNav" id="navbarFive">
+                                    <ul class="navbar-links">
+                                        <li class="nav-item active">
+                                            <a class="page-scroll " asp-controller="Home" asp-action="Index">Home</a>
+
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="#">About Us +</a>
+                                            <ul class="sub-menu">
+                                                <li><a asp-controller="Home" asp-action="WhoWeAre">Who We Are</a></li>
+                                                <li><a asp-controller="Home" asp-action="Team">Team</a></li>
+                                                <li>
+                                                    <a asp-controller="Home" asp-action="Social">
+                                                        Social and Environmental
+                                                        Impact
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" asp-controller="Home" asp-action="WhatWeDo">Our Services</a>
+                                            @* <ul class="sub-menu">
+                                                <li><a >What We Do</a></li>
+                                                <li><a asp-controller="Home" asp-action="FarmManagement">Farm Management</a></li>
+
+                                            </ul> *@
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="#">Digital Platforms +</a>
+                                            <ul class="sub-menu">
+                                                <li><a asp-controller="Home" asp-action="FarmManagement">Pukpara</a></li>
+
+                                                <li><a asp-controller="Home" asp-action="WamiMarket">Wami Market</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="page-scroll" asp-controller="Home" asp-action="Blog">Blog</a>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="navbar-btns">
+                                    <ul>
+                                        <!-- <li><a class="search-box" href="#"><i class="fal fa-search"></i></a></li> -->
+                                        <li>
+                                            <a class="d-none d-lg-inline" href="#myModal2" data-toggle="modal">
+                                                <i class="fal fa-bars"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav> 
+    </header>
+
+    @* <header class="header-area">
         <div class="header-top">
             <div class="container">
-            </div>
-        </div>
-        <div class="header-info" style="height: fit-content;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="header-info-item">
-                            <div class="logo">
-                                <a asp-controller="Home" asp-action="Index"><img src="~/assets/images/logo.png" alt="logo"></a>
-                            </div>
-                            <div class="header-info d-lg-flex d-none">
-                                <div class="item">
-                                    <i class="fal fa-phone"></i>
-                                    <span>Phone:</span>
-                                    <a href="tel:+233308040089">
-                                        <h5 class="title">+233 308 040 089</h5>
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <i class="fal fa-envelope-open"></i>
-                                    <span>Email:</span>
-                                    <a href="mailto:hello@wamiagro.com">
-                                        <h5 class="title">hello@wamiagro.com</h5>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="header-menu">
@@ -239,13 +284,13 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </nav> <!-- navbar -->
+                            </nav> 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </header> *@
 
     <!--====== HEADER PART ENDS ======-->
     @RenderBody()
@@ -304,10 +349,10 @@
                 <!-- About Company -->
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-content">
-                        <h4 class="title">About Company</h4>
-                        <p>
+                       @* <h4 class="title">About Company</h4>
+                         <p>
                             Wami Agro is an AgTech company based in Ghana that delivers tech-enabled solutions to secure sustainable sourcing, improve farmers' quality of life, and protect the environment. We typically work with actors in the production and market value chain.
-                        </p>
+                        </p> *@
                         <ul class="social-list">
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -329,17 +374,17 @@
                     </div>
                 </div>
                 <!-- Services -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="footer-list footer-list-2">
+                @* <div class="col-lg-3 col-md-6 col-sm-6"> *@
+                    @* <div class="footer-list footer-list-2">
                         <h4 class="title">Services</h4>
                         <ul>
-                            <li><a asp-controller="Home" asp-action="FarmManagement"><i class="far fa-long-arrow-right"></i> Pukpara</a></li>
+                            <li><a asp-controller="Home" asp-action="FarmManagement"><i class="far fa-long-arrow-right"></i> Pukpara</a></li> *@
                             @* <li><a href="#"><i class="far fa-long-arrow-right"></i> Schedule a Demo</a></li> *@
                             @* <li><a href="#"><i class="far fa-long-arrow-right"></i> Get a Call</a></li> *@
                             @* <li><a href="#"><i class="far fa-long-arrow-right"></i> Online Enquiry</a></li> *@
-                        </ul>
+                        @* </ul>
                     </div>
-                </div>
+                </div> *@
                 <!-- Contact Info -->
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-info mt-30">
