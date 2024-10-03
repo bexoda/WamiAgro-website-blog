@@ -1564,10 +1564,10 @@ Search Overlay CSS
       content: '';
       top: 50%;
       left: -75px;
-      transform: translateY(-50%);
+      /* transform: translateY(-50%); */
       width: 75px;
       height: 390px;
-      background: #6cbe03;
+      /* background: #6cbe03; */
       z-index: -1; }
     .features-area .features-thumb img {
       width: 100%; }
@@ -1631,7 +1631,9 @@ Search Overlay CSS
         bottom: -3px;
         height: 2px;
         width: 100%;
-        background: #6cbe03; }
+        background: #6cbe03; 
+      }
+
   .features-area .features-content .features-active .slick-arrow {
     position: absolute;
     top: 50%;
