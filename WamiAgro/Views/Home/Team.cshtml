@@ -128,22 +128,23 @@
                     </div>
                 </div>
             </div>
-            <!-- Manager 2: Marrilyn Addison -->
+
+            <!-- Manager 2: Angela Adzika -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30" style="background-image: url('/assets/images/pukpara/Angela_Website Pic.jpg');">
                     <div class="farmers-overlay">
                         <div class="item">
-                            <h4 class="title">Marrilyn Addison</h4>
-                            <span>Finance and Accounts Manager</span>
+                            <h4 class="title">Angela Adzika</h4>
+                            <span>Partnership & Innovations Manager</span>
                             <ul>
-                                <!-- Social icons can be added here -->
+                                <li><a href="https://www.linkedin.com/in/angela-adzika-6ab931205/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
                             <button class="btn btn-primary mt-3 view-profile-btn" data-toggle="modal" data-target="#teamModal"
-                                    data-name="Marrilyn Addison"
-                                    data-title="Finance and Accounts Manager"
+                                    data-name="Angela Adzika"
+                                    data-title="Partnership & Innovations Manager"
                                     data-qualifications="BA, ACCA"
-                                    data-experience="12 years of experience in financial management and accounting."
-                                    data-linkedin="#"
+                                    data-experience="Certified food system leader with 9 years' experience in the agriculture space."
+                                    data-linkedin="https://www.linkedin.com/in/angela-adzika-6ab931205/"
                                     data-image="/assets/images/pukpara/Angela_Website Pic.jpg">
                                 View Profile
                             </button>
@@ -151,6 +152,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Manager 3: Seyram Loh-Mensah -->
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="farmers-item mt-30" style="background-image: url('/assets/images/pukpara/Seyram_Website Pic.jpg');">
@@ -181,7 +183,33 @@
 <!--====== OUR TEAM PART ENDS ======-->
 <!--====== TEAM MEMBER MODAL ======-->
 <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
-    <!-- Modal content remains the same -->
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="teamModalLabel">Team Member</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img src="" alt="" id="modalImage" class="img-fluid rounded mb-3">
+                    </div>
+                    <div class="col-md-8">
+                        <h4 id="modalName"></h4>
+                        <h5 id="modalTitle" class="text-muted"></h5>
+                        <p><strong>Qualifications:</strong> <span id="modalQualifications"></span></p>
+                        <p><strong>Experience:</strong> <span id="modalExperience"></span></p>
+                        <p>
+                            <a href="#" target="_blank" id="modalLinkedIn"><i class="fab fa-linkedin-in"></i> </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--====== TEAM MEMBER MODAL ENDS ======-->
 <!--====== ADDITIONAL SCRIPTS ======-->
