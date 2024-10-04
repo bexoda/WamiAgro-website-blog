@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using WamiAgro.Models;
 
@@ -37,6 +38,7 @@ namespace WamiAgro.Controllers
         {
             return View();
         }
+
         public IActionResult Social()
         {
             return View();
@@ -52,18 +54,19 @@ namespace WamiAgro.Controllers
             return View();
         }
 
-
+        // Redirect all errors to the Index page
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return RedirectToAction("Index");
         }
 
+        // Redirect 404 errors to the Index page
         [Route("404")]
         public IActionResult PageNotFound()
         {
             Response.StatusCode = 404;
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }
