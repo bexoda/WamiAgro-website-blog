@@ -22,9 +22,9 @@
 
     <!--====== Flaticon css ======-->
     <link rel="stylesheet" href="~/assets/css/flaticon.css">
-
+@* 
     <!--====== Line Icons css ======-->
-    <link rel="stylesheet" href="~/assets/css/LineIcons.html">
+    <link rel="stylesheet" href="~/assets/css/LineIcons.html"> *@
 
     <!--====== Animate css ======-->
     <link rel="stylesheet" href="~/assets/css/animate.min.css">
@@ -43,7 +43,7 @@
 
     <!--====== Custom css ======-->
     <style>
-        /* Base styles */
+        /* Reset default styles for navigation */
         .customHeader {
             display: flex;
             justify-content: space-between;
@@ -51,80 +51,82 @@
             padding: 1rem 2rem;
             background-color: #02060e;
             position: relative;
+            width: 100%;
         }
 
-        .logo img {
-            max-height: 50px;
-        }
+            .customHeader .logo img {
+                max-height: 50px;
+            }
 
-        /* Navigation styles */
-        .navbar {
-            display: flex;
-            align-items: center;
-        }
+            /* Navigation styles */
+            .customHeader .navbar {
+                display: flex;
+                align-items: center;
+            }
 
-        .navbar-links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+            .customHeader .navbar-links {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
 
-        .nav-item {
-            position: relative;
-            margin-left: 1.5rem;
-        }
+            .customHeader .nav-item {
+                position: relative;
+                margin-left: 1.5rem;
+            }
 
-        .nav-item a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
+                .customHeader .nav-item a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 16px;
+                    display: block;
+                    padding: 0.5rem 0;
+                }
 
-        /* Submenu styles */
-        .sub-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #02060e;
-            padding: 1rem;
-            min-width: 200px;
-            z-index: 1000;
-            list-style: none;
-        }
+            /* Submenu styles */
+            .customHeader .sub-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #02060e;
+                padding: 1rem;
+                min-width: 200px;
+                z-index: 1000;
+                list-style: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
 
-        .nav-item:hover .sub-menu {
-            display: block;
-        }
-
-        .sub-menu li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Mobile menu button */
-        .hamburgerMenu {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .toggler-icon {
-            display: block;
-            width: 25px;
-            height: 2px;
-            background-color: white;
-            margin: 5px 0;
-        }
-
-        /* Responsive styles */
-        @@media only screen and (max-width: 768px) {
-            .hamburgerMenu {
+            .customHeader .nav-item:hover .sub-menu {
                 display: block;
             }
 
-            .pcNav {
+            /* Mobile menu button */
+            .customHeader .hamburgerMenu {
+                display: none;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0.5rem;
+            }
+
+            .customHeader .toggler-icon {
+                display: block;
+                width: 25px;
+                height: 2px;
+                background-color: white;
+                margin: 5px 0;
+                transition: 0.3s;
+            }
+
+        /* Responsive styles */
+        @@media only screen and (max-width: 768px) {
+            .customHeader .hamburgerMenu {
+                display: block;
+            }
+
+            .customHeader .pcNav {
                 display: none;
                 position: absolute;
                 top: 100%;
@@ -132,27 +134,29 @@
                 right: 0;
                 background-color: #02060e;
                 padding: 1rem;
+                z-index: 1000;
             }
 
-            .pcNav.active {
-                display: block;
-            }
+                .customHeader .pcNav.show {
+                    display: block !important;
+                }
 
-            .navbar-links {
+            .customHeader .navbar-links {
                 flex-direction: column;
             }
 
-            .nav-item {
-                margin: 0.5rem 0;
+            .customHeader .nav-item {
+                margin: 0;
             }
 
-            .sub-menu {
+            .customHeader .sub-menu {
                 position: static;
                 display: none;
                 padding-left: 1rem;
+                box-shadow: none;
             }
 
-            .nav-item.active .sub-menu {
+            .customHeader .nav-item.active .sub-menu {
                 display: block;
             }
         }
@@ -201,7 +205,6 @@
         </nav>
     </header>
     <!--====== HEADER PART ENDS ======-->
-
     @RenderBody()
 
     <!--====== FOOTER PART START ======-->
@@ -221,7 +224,8 @@
                     <div class="footer-list">
                         <h4 class="title">Quick Links</h4>
                         <ul>
-                            <li><a asp-controller="Home" asp-action="WhatWeDo"><i class="far fa-long-arrow-right"></i> Our Services</a></li>
+                            <li><a asp-controller="Home" asp-action="WhatWeDo"><i class="far fa-long-arrow-right"></i> Our Services</a>
+                            <li>
                             <li><a asp-controller="Home" asp-action="WhoWeAre"><i class="far fa-long-arrow-right"></i> About Us</a></li>
                             <li><a asp-controller="Home" asp-action="Team"><i class="far fa-long-arrow-right"></i> Meet The Team</a></li>
                         </ul>
@@ -267,7 +271,6 @@
         </div>
     </footer>
     <!--====== FOOTER PART ENDS ======-->
-
     <!--====== BACK TO TOP START ======-->
     <div class="back-to-top">
         <a href="#">
@@ -275,7 +278,6 @@
         </a>
     </div>
     <!--====== BACK TO TOP ENDS ======-->
-
     <!--====== Required JS ======-->
     <script src="~/assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="~/assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -287,32 +289,53 @@
     <script src="~/assets/js/jquery.counterup.min.js"></script>
     <script src="~/assets/js/waypoints.min.js"></script>
     <script src="~/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="~/assets/js/ajax-contact.html"></script>
     <script src="~/assets/js/main.js"></script>
 
     <!--====== Custom JS for mobile menu ======-->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const hamburgerMenu = document.querySelector('.hamburgerMenu');
             const pcNav = document.querySelector('.pcNav');
             const navItems = document.querySelectorAll('.nav-item');
 
-            hamburgerMenu.addEventListener('click', function() {
-                pcNav.classList.toggle('active');
+            // Toggle mobile menu
+            hamburgerMenu.addEventListener('click', function (e) {
+                e.preventDefault();
+                pcNav.classList.toggle('show');
+
+                // Toggle hamburger menu animation
+                this.classList.toggle('active');
             });
 
             // Handle submenu toggles on mobile
             navItems.forEach(item => {
                 const link = item.querySelector('a');
                 const subMenu = item.querySelector('.sub-menu');
-                
+
                 if (subMenu) {
-                    link.addEventListener('click', function(e) {
+                    link.addEventListener('click', function (e) {
                         if (window.innerWidth <= 768) {
                             e.preventDefault();
+                            e.stopPropagation();
+
+                            // Close other submenus
+                            navItems.forEach(otherItem => {
+                                if (otherItem !== item) {
+                                    otherItem.classList.remove('active');
+                                }
+                            });
+
                             item.classList.toggle('active');
                         }
                     });
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!pcNav.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+                    pcNav.classList.remove('show');
+                    hamburgerMenu.classList.remove('active');
                 }
             });
         });
