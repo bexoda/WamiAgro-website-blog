@@ -50,6 +50,7 @@
     </div>
 </section>
 <!--====== BANNER PART ENDS ======-->
+
 <!--====== FEATURES PART START ======-->
 <section class="features-area pt-130 pb-130">
     
@@ -131,6 +132,7 @@
     </div>
 </section>
 <!--====== FEATURES PART ENDS ======-->
+
 <!--====== WHAT WE DO 2 PART START ======-->
 <section class="what-we-do-2-area">
     <div class="container">
@@ -138,7 +140,7 @@
             <div class="col-lg-8 col-md-8">
                 <div class="section-title text-center">
                     <span>What we do</span>
-                    <h3 class="title">We Provide Products and Services</h3>
+                    <h3 class="title">Our Services</h3>
                 </div>
             </div>
         </div>
@@ -168,7 +170,7 @@
                                 <div class="services-content text-center">
                                     <h4 class="title">Wami Market</h4>
                                     <p>Reliable market access with fair prices for your produce.</p>
-                                    <a href="#" data-toggle="modal" data-target="#wamiMarketModal">read more</a>
+                                    <a asp-controller="Home" asp-action="WamiMarket" data-toggle="modal" data-target="#wamiMarketModal">read more</a>
                                 </div>
                             </div>
                         </div>
@@ -202,10 +204,18 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="text-center mb-3">
-                            <img src="~/assets/images/wamicredit.jpg" alt="Wami Credit" class="img-fluid" style="max-width: 100%; height: auto;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <!-- Image Section -->
+                                <div class="col-md-6">
+                                    <img src="~/assets/images/wamicredit.jpg" alt="Wami Credit" class="img-fluid modal-image" loading="lazy">
+                                </div>
+                                <!-- Text Section -->
+                                <div class="col-md-6">
+                                    <p>We supply farmers with seeds, fertiliser, and mechanization services for production on credit to be paid during harvest. WamiAgro takes repayment of this input credit via the commercial sales of a farmer’s crop.</p>
+                                </div>
+                            </div>
                         </div>
-                        <p>We supply farmers with seeds, fertiliser, and mechanization services for production on credit to be paid during harvest. WamiAgro takes repayment of this input credit via the commercial sales of a farmer’s crop.</p>
                     </div>
                 </div>
             </div>
@@ -222,10 +232,18 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="text-center mb-3">
-                            <img src="~/assets/images/wamimarket.jpg" alt="Wami Market" class="img-fluid" style="max-width: 100%; height: auto;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <!-- Image Section -->
+                                <div class="col-md-6">
+                                    <img src="~/assets/images/wamimarket.jpg" alt="Wami Market" class="img-fluid modal-image" loading="lazy">
+                                </div>
+                                <!-- Text Section -->
+                                <div class="col-md-6">
+                                    <p>WamiAgro provides reliable market access with fair prices by buying from various smallholders and selling in bulk to factories, distributors, and retailers both locally and for export. Our customers receive a fully traceable product that is grown with biodiverse, regenerative methods that enrich local environments.</p>
+                                </div>
+                            </div>
                         </div>
-                        <p>WamiAgro provides reliable market access with fair prices by buying from various smallholders and selling in bulk to factories, distributors, and retailers both locally and for export. Our customers receive a fully traceable product that is grown with biodiverse, regenerative methods that enrich local environments.</p>
                     </div>
                 </div>
             </div>
@@ -242,10 +260,18 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="text-center mb-3">
-                            <img src="~/assets/images/wamiinfo.jpg" alt="Wami Info" class="img-fluid" style="max-width: 100%; height: auto;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <!-- Image Section -->
+                                <div class="col-md-6">
+                                    <img src="~/assets/images/wamiinfo.jpg" alt="Wami Info" class="img-fluid modal-image" loading="lazy">
+                                </div>
+                                <!-- Text Section -->
+                                <div class="col-md-6">
+                                    <p>We build the capacities of farmers through a series of Good Agricultural Practices (GAP) training, financial literacy training, and provide important weather updates in local dialects. This helps improve their long-term resilience, even in changing climates.</p>
+                                </div>
+                            </div>
                         </div>
-                        <p>We build the capacities of farmers through a series of Good Agricultural Practices (GAP) training, financial literacy training, and provide important weather updates in local dialects. This helps improve their long-term resilience, even in changing climates.</p>
                     </div>
                 </div>
             </div>
@@ -254,6 +280,7 @@
     </div>
 </section>
 <!--====== WHAT WE DO 2 PART ENDS ======-->
+
 <!--====== FEEDBACK 3 PART START ======-->
 
 <section class="feedback-3-area pt-110">
@@ -298,7 +325,6 @@
                     <div class="col-lg-12">
                         <div class="feedback-content">
                             <div class="info">
-                               
                             </div>
                             <p>I am able to sell more produce due to the higher yields I get from using WamiAgro products. It has helped me save money and also use some to support family expenses.</p>
                             <ul>
@@ -315,8 +341,101 @@
         </div>
     </div>
 </section>
+
+<!--====== PARTNERS SECTION START ======-->
+<section class="brand-area pt-30 pb-50"> <!-- Added pt-80 and pb-80 for padding -->
+    <div class="container">
+        <!-- Added Heading for Partners Section -->
+        <div class="row justify-content-center mb-40"> <!-- mb-40 for bottom margin -->
+            <div class="col-lg-8 col-md-10">
+                <div class="section-title text-center">
+                    <span>Our Partners</span> <!-- Optional Subtitle -->
+                    <h3 class="title">Trusted by Leading Organizations</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row brand-active">
+            <!-- Partner 1 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://wangaragreenventures.com/" target="_blank">
+                        <img src="/assets/images/brands/WangaraGreenVenture.png" alt="Wangara Green Venture" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 2 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://www.rdfghana.com/" target="_blank">
+                        <img src="/assets/images/brands/RDFGreen.png" alt="RDF Green" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 3 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://www.absa.com.gh" target="_blank">
+                        <img src="/assets/images/brands/absa.png" alt="Absa Bank" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 4 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://growthafrica.com/" target="_blank">
+                        <img src="/assets/images/brands/growthafrica.png" alt="Growth Africa" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 5 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://cala.agra.org/" target="_blank">
+                        <img src="/assets/images/brands/cala.png" alt="Cala Initiative" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 6 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://www.millersocent.org/" target="_blank">
+                        <img src="/assets/images/brands/Millercentre.png" alt="Miller Centre" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 7 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://www.innohub.com.gh/" target="_blank">
+                        <img src="/assets/images/brands/innohub.png" alt="InnoHub" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 8 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="https://meltwater.org/mest-scale" target="_blank">
+                        <img src="/assets/images/brands/mestscale.png" alt="MEST Scale" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <!-- Partner 9 -->
+            <!-- If you have Partner 9, add here -->
+            <!-- Partner 10 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="brand-item text-center">
+                    <a href="#" target="_blank">
+                        <img src="/assets/images/brands/unicorn.png" alt="Unicorn Group" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== PARTNERS SECTION ENDS ======-->
 <!--====== FEEDBACK 3 PART ENDS ======-->
-<!--====== Custom CSS for What We Do Section ======-->
+
+<!--====== Custom CSS for What We Do and Partners Sections ======-->
 <style>
     /* Ensure all service images have the same dimensions */
     .services-image {
@@ -334,10 +453,10 @@
         border-radius: 8px; /* Optional: Rounded corners */
     }
 
-        .services-item:hover {
-            transform: translateY(-5px); /* Slight raise effect on hover */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-        }
+    .services-item:hover {
+        transform: translateY(-5px); /* Slight raise effect on hover */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
 
     .services-content h4 {
         margin-top: 10px; /* Space above the title */
@@ -355,9 +474,9 @@
         text-decoration: none;
     }
 
-        .services-content a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
+    .services-content a:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
 
     /* Modal Image Styling */
     .modal-body img {
@@ -365,5 +484,83 @@
         height: auto;
         margin-bottom: 15px;
     }
+
+    /* Custom Modal Styling for Landscape View */
+    .modal-body .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .modal-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px; /* Optional: Adds rounded corners to images */
+    }
+
+    /* Adjust spacing between image and text */
+    .modal-body .col-md-6 {
+        padding: 15px;
+    }
+
+    /* Responsive Adjustments */
+    @@media (max-width: 768px) {
+        .modal-body .row {
+            flex-direction: column;
+        }
+
+        .modal-body .col-md-6 {
+            padding: 10px 0;
+        }
+    }
+
+    /* Partners Section Styling */
+    .brand-area {
+        /* Padding is already handled via Bootstrap classes (pt-80 pb-80) */
+    }
+
+    .brand-area .section-title span {
+        display: block;
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    .brand-area .section-title .title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Optional: Style the partner logos */
+    .brand-item img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .brand-item img:hover {
+        transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+
+    /* Ensure the banner area's pseudo-element has a white background and scales correctly */
+    .banner-area.banner-3-area .banner-item::before {
+        content: ""; /* Ensure the pseudo-element is rendered */
+        position: absolute; /* Position it relative to the parent */
+        top: 0;
+        left: auto;
+        right: 0;
+        width: 45%;
+        height: 100%; /* Adjust as needed */
+        background-image: url('../images/pukpara/pukpara.png');
+        background-size: contain; /* Ensure the whole image is visible */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white; /* Set white background */
+        z-index: -1; /* Position it behind the content if necessary */
+    }
+
+    /* Ensure the parent has relative positioning */
+    .banner-area.banner-3-area .banner-item {
+        position: relative;
+    }
 </style>
-<!--====== Custom CSS for What We Do Section Ends ======-->
+<!--====== Custom CSS for What We Do and Partners Sections Ends ======-->
