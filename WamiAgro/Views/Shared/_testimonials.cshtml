@@ -1,0 +1,371 @@
+﻿@* Ensure this is within your Razor view *@
+
+<!-- Bootstrap CSS -->
+@* Ensure this is within your Razor view *@
+
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+<!-- Google Fonts: Montserrat -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+
+<style>
+    /* General Styles */
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    a,
+    a:hover {
+        text-decoration: none;
+    }
+
+    /* Testimonial Section */
+    .testimonial {
+        padding: 100px 0;
+        background-color: #f9f9f9; /* Optional: Add a background color */
+    }
+
+        .testimonial .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        /* Tabs Section */
+        .testimonial .tabs {
+            list-style: none;
+            padding: 0;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .testimonial .tabs li {
+                position: relative;
+                margin-bottom: 20px; /* Spacing between tabs */
+                cursor: pointer;
+                transition: transform 0.3s;
+            }
+
+                .testimonial .tabs li.active::before {
+                    position: absolute;
+                    content: "";
+                    width: 50px;
+                    height: 50px;
+                    background-color: #71b85f;
+                    border-radius: 50%;
+                    /* Positioning will be handled per nth-child */
+                }
+
+                .testimonial .tabs li.active::after {
+                    position: absolute;
+                    content: "";
+                    width: 30px;
+                    height: 30px;
+                    background-color: #71b85f;
+                    border-radius: 50%;
+                    /* Positioning will be handled per nth-child */
+                }
+
+                /* Specific Tab Positions and Image Sizes */
+                /* Testimonial 1 */
+                .testimonial .tabs li:nth-child(1) {
+                    align-self: flex-end;
+                }
+
+                    .testimonial .tabs li:nth-child(1)::before {
+                        left: 64%;
+                        bottom: -50px;
+                    }
+
+                    .testimonial .tabs li:nth-child(1)::after {
+                        left: 97%;
+                        bottom: -81px;
+                    }
+
+                    .testimonial .tabs li:nth-child(1) figure img {
+                        width: 179px;
+                        height: 179px;
+                        object-fit: cover;
+                        border-radius: 50%; /* Make images circular */
+                        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow */
+                    }
+
+                /* Testimonial 2 */
+                .testimonial .tabs li:nth-child(2) {
+                    align-self: flex-start;
+                }
+
+                    .testimonial .tabs li:nth-child(2)::before {
+                        right: -65px;
+                        top: 50%;
+                    }
+
+                    .testimonial .tabs li:nth-child(2)::after {
+                        bottom: 101px;
+                        right: -120px;
+                    }
+
+                    .testimonial .tabs li:nth-child(2) figure img {
+                        width: 300px;
+                        height: 300px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                        margin-top: -50px; /* Adjust as needed */
+                    }
+
+                /* Testimonial 3 */
+                .testimonial .tabs li:nth-child(3) {
+                    align-self: flex-end;
+                }
+
+                    .testimonial .tabs li:nth-child(3)::before {
+                        right: -10px;
+                        top: -66%;
+                    }
+
+                    .testimonial .tabs li:nth-child(3)::after {
+                        top: -130px;
+                        right: -46px;
+                    }
+
+                    .testimonial .tabs li:nth-child(3) figure img {
+                        width: 179px;
+                        height: 179px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                        margin-top: -50px; /* Adjust as needed */
+                    }
+
+                /* Hover Effects */
+                .testimonial .tabs li figure::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    border: 4px solid #dff9d9;
+                    border-radius: 50%;
+                    transform: scale(1);
+                    transition: transform 0.3s;
+                }
+
+                .testimonial .tabs li figure:hover::after {
+                    transform: scale(1.1);
+                }
+
+        /* Carousel Headers */
+        .testimonial .carousel > h3 {
+            font-size: 20px;
+            line-height: 1.45;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 600;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .testimonial .carousel h1 {
+            font-size: 40px;
+            line-height: 1.225;
+            margin-top: 23px;
+            font-weight: 700;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        /* Carousel Indicators */
+        .testimonial .carousel-indicators.indicators {
+            list-style: none;
+            padding-top: 43px;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+            .testimonial .carousel-indicators.indicators li {
+                background: #000;
+                height: 2px;
+                width: 30px;
+                margin-right: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+                .testimonial .carousel-indicators.indicators li.active {
+                    background: #71b85f; /* Active indicator color */
+                }
+
+        /* Carousel Content */
+        .testimonial .carousel .carousel-inner .carousel-item .quote-wrapper {
+            margin-top: 42px;
+            text-align: justify; /* Changed from center to justify */
+        }
+
+            .testimonial .carousel .carousel-inner .carousel-item .quote-wrapper p {
+                font-size: 18px;
+                line-height: 1.72;
+                font-weight: 500;
+                color: rgba(0, 0, 0, 0.7);
+                margin-bottom: 20px;
+                text-align: justify; /* Ensure text is justified */
+            }
+
+            .testimonial .carousel .carousel-inner .carousel-item .quote-wrapper h3 {
+                color: #000;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 1.45;
+                text-transform: uppercase;
+                text-align: center; /* Center the name */
+            }
+
+    /* Responsive Styles */
+    @@media only screen and (max-width: 1200px) {
+        .testimonial .tabs {
+            margin-right: 25px;
+        }
+
+            .testimonial .tabs li:nth-child(2) figure img {
+                width: 250px;
+                height: 250px;
+            }
+    }
+
+    @@media only screen and (max-width: 768px) {
+        .testimonial .row {
+            flex-direction: column;
+        }
+
+        .testimonial .tabs {
+            flex-direction: row;
+            margin-right: 0;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+            .testimonial .tabs li {
+                margin: 0 10px;
+            }
+
+                .testimonial .tabs li:nth-child(1)::before,
+                .testimonial .tabs li:nth-child(1)::after,
+                .testimonial .tabs li:nth-child(2)::before,
+                .testimonial .tabs li:nth-child(2)::after,
+                .testimonial .tabs li:nth-child(3)::before,
+                .testimonial .tabs li:nth-child(3)::after {
+                    display: none; /* Hide decorative elements on smaller screens */
+                }
+
+        .testimonial .carousel .carousel-inner .carousel-item .quote-wrapper {
+            margin-top: 20px;
+        }
+    }
+
+    @@media only screen and (max-width: 567px) {
+        .testimonial .tabs li:nth-child(2) figure img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .testimonial .carousel h1 {
+            font-size: 30px;
+        }
+    }
+</style>
+
+
+<section class="testimonial">
+    <div class="container">
+        <div class="row">
+            <!-- Tabs Section -->
+            <div class="col-lg-6 d-none d-lg-block">
+                <ol class="tabs">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                        <figure>
+                            <img src="@Url.Content("~/assets/images/pukpara/testimonial-image-1.jpg")" class="img-fluid" alt="Testimonial 1">
+                        </figure>
+                    </li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                        <figure>
+                            <img src="@Url.Content("~/assets/images/pukpara/testimonial-image-2.jpg")" class="img-fluid" alt="Testimonial 2">
+                        </figure>
+                    </li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                        <figure>
+                            <img src="@Url.Content("~/assets/images/pukpara/testimonial-image-3.jpg")" class="img-fluid" alt="Testimonial 3">
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Carousel Section -->
+            <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                <div id="carouselExampleIndicators" class="carousel slide w-100" data-ride="carousel" data-interval="false">
+                    <h3>WHAT OUR CLIENTS SAY</h3>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="quote-wrapper">
+                                <p>I'll recommend WamiAgro because they helped us. If you are not a government worker, you wouldn't be able to afford the fertilizer they gave us. It has encouraged me to farm.</p>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="quote-wrapper">
+                                <p>Since I signed up for WamiAgro’s input credit facility, I’ve obtained quality maize seeds and fertilizer for my farming. I always get more yields from harvest, which brings more income to me.</p>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="quote-wrapper">
+                                <p>I am able to sell more produce due to the higher yields I get from using WamiAgro products. It has helped me save money and also use some to support family expenses.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel Indicators -->
+                    <ol class="carousel-indicators indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        // Sync Tabs with Carousel
+        $(".testimonial .tabs li").click(function () {
+            var index = $(this).data('slide-to');
+            $('#carouselExampleIndicators').carousel(index);
+        });
+
+        // Update Active Tab on Carousel Slide
+        $('#carouselExampleIndicators').on('slide.bs.carousel', function (e) {
+            var index = $(e.relatedTarget).index();
+            $(".testimonial .tabs li").removeClass('active');
+            $(".testimonial .tabs li").eq(index).addClass('active');
+        });
+
+        // Optional: Add keyboard accessibility
+        $(".testimonial .tabs li").keypress(function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                $(this).click();
+            }
+        });
+    });
+</script>
