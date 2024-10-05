@@ -22,7 +22,7 @@
 
     <!--====== Flaticon css ======-->
     <link rel="stylesheet" href="~/assets/css/flaticon.css">
-@* 
+    @*
     <!--====== Line Icons css ======-->
     <link rel="stylesheet" href="~/assets/css/LineIcons.html"> *@
 
@@ -41,169 +41,57 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="~/assets/css/style.css">
 
-    <!--====== Custom css ======-->
-    <style>
-        /* Reset default styles for navigation */
-        .customHeader {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: #02060e;
-            position: relative;
-            width: 100%;
-        }
-
-            .customHeader .logo img {
-                max-height: 50px;
-            }
-
-            /* Navigation styles */
-            .customHeader .navbar {
-                display: flex;
-                align-items: center;
-            }
-
-            .customHeader .navbar-links {
-                display: flex;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            .customHeader .nav-item {
-                position: relative;
-                margin-left: 1.5rem;
-            }
-
-                .customHeader .nav-item a {
-                    color: white;
-                    text-decoration: none;
-                    font-size: 16px;
-                    display: block;
-                    padding: 0.5rem 0;
-                }
-
-            /* Submenu styles */
-            .customHeader .sub-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background-color: #02060e;
-                padding: 1rem;
-                min-width: 200px;
-                z-index: 1000;
-                list-style: none;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-
-            .customHeader .nav-item:hover .sub-menu {
-                display: block;
-            }
-
-            /* Mobile menu button */
-            .customHeader .hamburgerMenu {
-                display: none;
-                background: none;
-                border: none;
-                cursor: pointer;
-                padding: 0.5rem;
-            }
-
-            .customHeader .toggler-icon {
-                display: block;
-                width: 25px;
-                height: 2px;
-                background-color: white;
-                margin: 5px 0;
-                transition: 0.3s;
-            }
-
-        /* Responsive styles */
-        @@media only screen and (max-width: 768px) {
-            .customHeader .hamburgerMenu {
-                display: block;
-            }
-
-            .customHeader .pcNav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background-color: #02060e;
-                padding: 1rem;
-                z-index: 1000;
-            }
-
-                .customHeader .pcNav.show {
-                    display: block !important;
-                }
-
-            .customHeader .navbar-links {
-                flex-direction: column;
-            }
-
-            .customHeader .nav-item {
-                margin: 0;
-            }
-
-            .customHeader .sub-menu {
-                position: static;
-                display: none;
-                padding-left: 1rem;
-                box-shadow: none;
-            }
-
-            .customHeader .nav-item.active .sub-menu {
-                display: block;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="~/assets/css/override.css" />
 </head>
 
 <body>
     <!--====== HEADER PART START ======-->
-    <header class="customHeader">
-        <div class="logo">
-            <a asp-controller="Home" asp-action="Index">
+   
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                 <img src="/assets/images/logo.png" alt="logo">
             </a>
-        </div>
-        <nav class="navbar">
-            <button class="hamburgerMenu" type="button" aria-label="Toggle navigation">
-                <span class="toggler-icon"></span>
-                <span class="toggler-icon"></span>
-                <span class="toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="pcNav" id="navbarFive">
-                <ul class="navbar-links">
-                    <li class="nav-item active">
-                        <a class="page-scroll" asp-controller="Home" asp-action="Index">Home</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" asp-controller="Home" asp-action="WhoWeAre">Who We Are</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" asp-controller="Home" asp-action="Team">Team</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" asp-controller="Home" asp-action="Social">Social and Environmental Impact</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="page-scroll" href="#">About Us +</a>
-                        <ul class="sub-menu">
-                            <li><a asp-controller="Home" asp-action="WhoWeAre">Who We Are</a></li>
-                            <li><a asp-controller="Home" asp-action="Team">Team</a></li>
-                            <li><a asp-controller="Home" asp-action="Social">Social and Environmental Impact</a></li>
-                        </ul>
+                        <a class="nav-link" asp-controller="Home" asp-action="WhatWeDo">Our Services</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="page-scroll" asp-controller="Home" asp-action="WhatWeDo">Our Services</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Digital Platforms
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <a class="dropdown-item" asp-controller="Home" asp-action="FarmManagement">Pukpara</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" asp-controller="Home" asp-action="WamiMarket">Wami Market</a>
+                           
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="page-scroll" href="#">Digital Platforms +</a>
-                        <ul class="sub-menu">
-                            <li><a asp-controller="Home" asp-action="FarmManagement">Pukpara</a></li>
-                            <li><a asp-controller="Home" asp-action="WamiMarket">Wami Market</a></li>
-                        </ul>
-                    </li>
+                  
                 </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+    @* </header> *@
     <!--====== HEADER PART ENDS ======-->
     @RenderBody()
 
@@ -220,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="col-lg-2 col-md-2 col-sm-6">
                     <div class="footer-info mt-30">
                         <h3 class="title">Quick Links</h3>
@@ -230,7 +118,7 @@
                             <li><a asp-controller="Home" asp-action="WhoWeAre"><i class="far fa-long-arrow-right"></i> About Us</a></li>
                             <li><a asp-controller="Home" asp-action="Team"><i class="far fa-long-arrow-right"></i> Meet The Team</a></li>
                         </ul>
-                       
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -304,51 +192,31 @@
 
     <!--====== Custom JS for mobile menu ======-->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburgerMenu = document.querySelector('.hamburgerMenu');
-            const pcNav = document.querySelector('.pcNav');
-            const navItems = document.querySelectorAll('.nav-item');
+     
+        const $dropdown = $(".dropdown");
+        const $dropdownToggle = $(".dropdown-toggle");
+        const $dropdownMenu = $(".dropdown-menu");
+        const showClass = "show";
 
-            // Toggle mobile menu
-            hamburgerMenu.addEventListener('click', function (e) {
-                e.preventDefault();
-                pcNav.classList.toggle('show');
-
-                // Toggle hamburger menu animation
-                this.classList.toggle('active');
-            });
-
-            // Handle submenu toggles on mobile
-            navItems.forEach(item => {
-                const link = item.querySelector('a');
-                const subMenu = item.querySelector('.sub-menu');
-
-                if (subMenu) {
-                    link.addEventListener('click', function (e) {
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            e.stopPropagation();
-
-                            // Close other submenus
-                            navItems.forEach(otherItem => {
-                                if (otherItem !== item) {
-                                    otherItem.classList.remove('active');
-                                }
-                            });
-
-                            item.classList.toggle('active');
-                        }
-                    });
-                }
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', function (e) {
-                if (!pcNav.contains(e.target) && !hamburgerMenu.contains(e.target)) {
-                    pcNav.classList.remove('show');
-                    hamburgerMenu.classList.remove('active');
-                }
-            });
+        $(window).on("load resize", function () {
+            if (this.matchMedia("(min-width: 768px)").matches) {
+                $dropdown.hover(
+                    function () {
+                        const $this = $(this);
+                        $this.addClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "true");
+                        $this.find($dropdownMenu).addClass(showClass);
+                    },
+                    function () {
+                        const $this = $(this);
+                        $this.removeClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "false");
+                        $this.find($dropdownMenu).removeClass(showClass);
+                    }
+                );
+            } else {
+                $dropdown.off("mouseenter mouseleave");
+            }
         });
     </script>
 
