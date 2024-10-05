@@ -132,7 +132,7 @@
 </section>
 <!--====== FEATURES PART ENDS ======-->
 <!--====== WHAT WE DO 2 PART START ======-->
-<section class="what-we-do-2-area">
+@* <section class="what-we-do-2-area">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-8">
@@ -276,7 +276,13 @@
         </div>
         <!--====== End of Modals ======-->
     </div>
-</section>
+</section> *@
+
+
+@{
+    Html.RenderPartial("_services");
+}
+
 <!--====== WHAT WE DO 2 PART ENDS ======-->
 <!--====== FEEDBACK 3 PART START ======-->
 @* <section class="feedback-3-area pt-110">
