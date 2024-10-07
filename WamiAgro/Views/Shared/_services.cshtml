@@ -1,0 +1,123 @@
+﻿@* Partial View: Services.cshtml *@
+
+@* Include Bootstrap CSS and Icons *@
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+@* Include Custom CSS *@
+<style>
+    /* Custom Green Color */
+    .custom-green {
+        color: #6cbe03 !important;
+    }
+
+    .custom-green-border {
+        border-bottom: 3px solid #6cbe03 !important;
+    }
+
+    .custom-green-link {
+        color: #6cbe03 !important;
+    }
+
+        .custom-green-link:hover {
+            color: #558e02 !important; /* Darker shade for hover effect */
+            text-decoration: underline;
+        }
+
+    /* Ensure all cards have equal heights */
+    .services-item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /* Flexbox for equal heights */
+    .services-card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+        /* Adjust the paragraph to grow and fill space */
+        .services-card-body p {
+            flex-grow: 1;
+        }
+
+    /* Adjust icon size and color */
+    .services-icon {
+        font-size: 56px;
+        color: #6cbe03;
+    }
+
+    /* Ensure the section title uses the custom green */
+    .section-title .fs-6 {
+        color: #6cbe03;
+    }
+
+</style>
+
+<section class="bg-light py-5 py-xl-8">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+                <h2 class="title">Our Services</h2>
+
+                <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+            </div>
+        </div>
+    </div>
+
+    <div class="container overflow-hidden">
+        <!-- Center the cards -->
+        <div class="row gy-4 gy-xl-0 justify-content-center align-items-stretch">
+            <!-- Service Card: Wami Market -->
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card h-100 border-0 border-bottom custom-green-border shadow-sm">
+                    <div class="card-body text-center p-4 p-xxl-5 d-flex flex-column services-card-body">
+                        <!-- Icon -->
+                        <i class="bi bi-shop services-icon mb-4"></i>
+                        <h4 class="mb-4 custom-green">Wami Market</h4>
+                        <p class="mb-4 text-secondary flex-grow-1">Reliable market access with fair prices for your produce.</p>
+                        <a asp-controller="Home" asp-action="WamiMarket" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                            Learn More
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card: Wami Credit -->
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card h-100 border-0 border-bottom custom-green-border shadow-sm">
+                    <div class="card-body text-center p-4 p-xxl-5 d-flex flex-column services-card-body">
+                        <!-- Icon -->
+                        <i class="bi bi-credit-card services-icon mb-4"></i>
+                        <h4 class="mb-4 custom-green">Wami Credit</h4>
+                        <p class="mb-4 text-secondary flex-grow-1">Access seeds, fertilizer, and mechanization services on credit.</p>
+                        <a asp-controller="Home" asp-action="WamiCredit" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                            Learn More
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card: Wami Info -->
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card h-100 border-0 border-bottom custom-green-border shadow-sm">
+                    <div class="card-body text-center p-4 p-xxl-5 d-flex flex-column services-card-body">
+                        <!-- Icon -->
+                        <i class="bi bi-info-circle services-icon mb-4"></i>
+                        <h4 class="mb-4 custom-green">Wami Info</h4>
+                        <p class="mb-4 text-secondary flex-grow-1">Capacity building and vital information for resilient farming.</p>
+                        <a asp-controller="Home" asp-action="WamiInfo" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                            Learn More
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

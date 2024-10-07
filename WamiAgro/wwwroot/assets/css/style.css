@@ -26,8 +26,24 @@
 ===========================*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800&amp;display=swap");
 
+/* Apply Montserrat to the entire body */
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    /* Optionally, set a base font size and color */
+    font-size: 16px;
+    color: #333;
+}
+
+/* Ensure all standard elements inherit the body font */
+h1, h2, h3, h4, h5, h6,
+p, a, span, div, li, ul, ol,
+button, input, textarea, select {
+    font-family: inherit;
+}
+
+body {
+    /*font-family: "Open Sans", sans-serif;*/
+    font-family: 'Montserrat', sans-serif !important;
     font-weight: normal;
     font-style: normal;
     color: #686868;
@@ -2116,7 +2132,7 @@ Search Overlay CSS
 ===========================*/
 .features-area {
     position: relative;
-    padding-bottom: 116px;
+    padding-bottom: 50px;
     z-index: 5;
 }
 
@@ -7436,8 +7452,8 @@ Search Overlay CSS
 
 .what-we-do-2-area {
     background: #f4f7fe;
-    padding-top: 121px;
-    padding-bottom: 130px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
     .what-we-do-2-area .services-box {

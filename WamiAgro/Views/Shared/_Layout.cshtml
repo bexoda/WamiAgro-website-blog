@@ -10,6 +10,8 @@
 
     <!--====== Title ======-->
     <title>WamiAgro</title>
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="~/assets/images/favicon.ico" type="image/x-icon">
@@ -22,7 +24,7 @@
 
     <!--====== Flaticon css ======-->
     <link rel="stylesheet" href="~/assets/css/flaticon.css">
-    
+
     <!--====== Animate css ======-->
     <link rel="stylesheet" href="~/assets/css/animate.min.css">
 
@@ -43,8 +45,8 @@
 
 <body>
     <!--====== HEADER PART START ======-->
-   
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-black">
         <div class="container-fluid">
             <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                 <img src="/assets/images/logo.png" alt="logo">
@@ -80,10 +82,10 @@
                             <a class="dropdown-item" asp-controller="Home" asp-action="FarmManagement">Pukpara</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" asp-controller="Home" asp-action="WamiMarket">Wami Market</a>
-                           
+
                         </div>
                     </li>
-                  
+
                 </ul>
             </div>
         </div>
@@ -167,7 +169,6 @@
         </div>
     </footer>
     <!--====== FOOTER PART ENDS ======-->
-
     <!--====== BACK TO TOP START ======-->
     <div class="back-to-top">
         <a href="#">
@@ -190,7 +191,7 @@
 
     <!--====== Custom JS for mobile menu ======-->
     <script>
-     
+
         const $dropdown = $(".dropdown");
         const $dropdownToggle = $(".dropdown-toggle");
         const $dropdownMenu = $(".dropdown-menu");
