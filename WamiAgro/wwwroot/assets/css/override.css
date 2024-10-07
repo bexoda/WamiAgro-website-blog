@@ -1,128 +1,52 @@
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800&amp;display=swap");
-body {
-  font-family: "Open Sans", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #686868; }
 
+/* override.css */
 
-  * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  
-
-.customHeader{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: start;
-    padding: 0 2rem;
-    background-color: #02060e;
+/* Navigation Bar Background */
+.navbar {
+    background-color: #161616 !important; /* Ensures the navbar background is black */
 }
 
-/* .logo{
-
-} */
-
-.navbar-links{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    gap: 2rem;
-    color: white;
-}
-
-
-.nav-item{
-    background-color: white;
-}
-.nav-item a{
-    color: #6cbe03;
-    /* background-color: white; */
-}
-
-
-@media(max-width: 768px) {
-    .pcNav{
-        display: none;
+    /* Navigation Links */
+    .navbar .nav-link {
+        color: #fff !important; /* Sets text color to white */
+        font-size: 16px; /* Sets font size to 16px */
     }
 
-    .hamburgerMenu{
-        display: flex;
-        flex-direction: column;
+        /* Hover and Active States for Navigation Links */
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus,
+        .navbar .nav-item.active .nav-link {
+            color: #ffffff !important; /* Maintains white color on hover and active states */
+            background-color: transparent; /* Keeps background transparent on hover */
+        }
+
+    /* Remove default caret color and adjust caret position */
+    .navbar .dropdown-toggle::after {
+        border-top: 0.3em solid white; /* Adjust the caret color to white */
+        margin-left: 0.255em; /* Optional: Adjust caret spacing */
     }
 
-
-    .navbar .collapse.show .pcNav {
-        display: flex;
-    }
-
-    .navbar-links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-links li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .navbar-links a {
-        font-size: 18px;
-        padding: 10px;
-        width: 100%;
-        display: block;
-        text-align: center;
-    }
-
-    .sub-menu {
-        position: relative;
-        box-shadow: none;
-    }
-
-    .navbar-btns ul {
-        justify-content: center;
-        width: 100%;
-    }
-
-    /* .toggle-icon{
-        width: 1rem;
-        height: 4px;
-        color: white;
-        background: #fff;
-    } */
-
+/* Dropdown Menu Background */
+.dropdown-menu {
+    background-color: #161616 !important; /* Sets dropdown background to black */
+    border: none; /* Removes the default border */
 }
 
-@media only screen and (min-width: 768px){
-.hamburgerMenu{
-    display: none;
-}
-.navbar-btns{
-    display: none;
-}
+    /* Dropdown Items */
+    .dropdown-menu .dropdown-item {
+        color: #fff !important; /* Sets dropdown text color to white */
+        font-size: 16px; /* Sets font size to 16px */
+    }
 
-.sub-menu{
-    display: none;
-    position: absolute;
-    z-index: 10;
-}
+        /* Dropdown Items Hover and Focus States */
+        .dropdown-menu .dropdown-item:hover,
+        .dropdown-menu .dropdown-item:focus {
+            color: #ffffff !important; /* Maintains white text on hover */
+            background-color: #333 !important; /* Adds a darker background on hover */
+        }
 
-
-.nav-item{
-    position: relative;
-}
-
-.nav-item:hover .sub-menu {
-    display: block;
-}
-/* .page-scroll:hover.sub-menu li a{
-    opacity: 1;
-    visibility: visible;
-    top: 100%; 
-} */
-
+/* Dropdown Divider */
+.dropdown-divider {
+    border-top: 1px solid #444 !important; /* Sets divider color to dark gray for visibility */
 }
