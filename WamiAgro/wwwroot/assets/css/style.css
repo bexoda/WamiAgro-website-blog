@@ -6404,9 +6404,9 @@ Search Overlay CSS
     }
 
         .footer-area .footer-content ul li a:hover {
-            background: #6cbe03;
-            border-color: #6cbe03;
-            color: #fff;
+            background: #fff;
+            /* border-color: white; */
+            color: #6cbe03;
         }
 
 .footer-area .footer-list {
@@ -6521,7 +6521,17 @@ Search Overlay CSS
 
 .footer-area .footer-info ul li a i {
     color: #6cbe03;
-    padding-right: 6px;
+    /* padding-right: 6px; */
+}
+
+.footer-area .footer-info ul li a i :hover{
+    /* background-color: white; */
+    text-decoration: underline;
+}
+
+.footer-area .footer-info ul li a:hover{
+    /* background-color: white; */
+    text-decoration: underline;
 }
 
 .footer-area .footer-copyright {
