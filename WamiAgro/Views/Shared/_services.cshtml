@@ -19,29 +19,24 @@
         color: #6cbe03 !important;
     }
 
-        .custom-green-link:hover {
-            color: #558e02 !important; /* Darker shade for hover effect */
-            text-decoration: underline;
-        }
+    .custom-green-link:hover {
+        color: #558e02 !important; /* Darker shade for hover effect */
+        text-decoration: underline;
+    }
 
-    /* Ensure all cards have equal heights */
-    .services-item {
+    /* Ensure all service rows have equal heights */
+    .service-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .service-content {
         display: flex;
         flex-direction: column;
         height: 100%;
     }
-
-    /* Flexbox for equal heights */
-    .services-card-body {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-        /* Adjust the paragraph to grow and fill space */
-        .services-card-body p {
-            flex-grow: 1;
-        }
 
     /* Adjust icon size and color */
     .services-icon {
@@ -54,6 +49,17 @@
         color: #6cbe03;
     }
 
+    /* Responsive adjustments */
+    @@media (max-width: 767.98px) {
+        .service-row {
+            flex-direction: column;
+            text-align: center;
+        }
+        .service-row .service-image,
+        .service-row .service-text {
+            text-align: center;
+        }
+    }
 </style>
 
 <section class="bg-light py-5 py-xl-8">
@@ -62,61 +68,66 @@
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-7">
                 <h2 class="title">Our Services</h2>
-
                 <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
             </div>
         </div>
     </div>
 
-    <div class="container overflow-hidden">
-        <!-- Center the cards -->
-        <div class="row gy-4 gy-xl-0 justify-content-center align-items-stretch">
-            <!-- Service Card: Wami Market -->
-            <div class="col-12 col-sm-6 col-xl-3">
-                <div class="card h-100 border-0 border-bottom custom-green-border shadow-sm">
-                    <div class="card-body text-center p-4 p-xxl-5 d-flex flex-column services-card-body">
-                        <!-- Icon -->
-                        <i class="bi bi-shop services-icon mb-4"></i>
-                        <h4 class="mb-4 custom-green">Wami Market</h4>
-                        <p class="mb-4 text-secondary flex-grow-1">Reliable market access with fair prices for your produce.</p>
-                        <a asp-controller="Home" asp-action="WamiMarket" class="fw-bold text-decoration-none custom-green-link mt-auto">
-                            Learn More
-                            <i class="bi bi-arrow-right-short"></i>
-                        </a>
-                    </div>
-                </div>
+    <div class="container overflow-hidden w-100">
+        <!-- Service: Wami Market -->
+        <div class="service-row">
+            <!-- Image Column -->
+            <div class="col-12 col-md-6 service-image">
+                <img src="@Url.Content("~/assets/images/pukpara/pukpara.png")" alt="Wami Market" class="img-fluid rounded">
             </div>
-
-            <!-- Service Card: Wami Credit -->
-            <div class="col-12 col-sm-6 col-xl-3">
-                <div class="card h-100 border-0 border-bottom custom-green-border shadow-sm">
-                    <div class="card-body text-center p-4 p-xxl-5 d-flex flex-column services-card-body">
-                        <!-- Icon -->
-                        <i class="bi bi-credit-card services-icon mb-4"></i>
-                        <h4 class="mb-4 custom-green">Wami Credit</h4>
-                        <p class="mb-4 text-secondary flex-grow-1">Access seeds, fertilizer, and mechanization services on credit.</p>
-                        <a asp-controller="Home" asp-action="WamiCredit" class="fw-bold text-decoration-none custom-green-link mt-auto">
-                            Learn More
-                            <i class="bi bi-arrow-right-short"></i>
-                        </a>
-                    </div>
-                </div>
+            <!-- Text Column -->
+            <div class="col-12 col-md-6 service-text service-content">
+                <h4 class="mb-4 custom-green">Wami Market</h4>
+                <p class="mb-4 text-secondary flex-grow-1 text-justify">
+                    WamiAgro provides reliable market access with fair prices by buying from various smallholders and selling in bulk to factories, distributors, and retailers both locally and for export. Our customers receive a fully traceable product that is grown with biodiverse, regenerative methods that enrich local environments.
+                </p>
+                <a asp-controller="Home" asp-action="WamiMarket" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                    Learn More
+                    <i class="bi bi-arrow-right-short"></i>
+                </a>
             </div>
+        </div>
 
-            <!-- Service Card: Wami Info -->
-            <div class="col-12 col-sm-6 col-xl-3">
-                <div class="card h-100 border-0 border-bottom custom-green-border shadow-sm">
-                    <div class="card-body text-center p-4 p-xxl-5 d-flex flex-column services-card-body">
-                        <!-- Icon -->
-                        <i class="bi bi-info-circle services-icon mb-4"></i>
-                        <h4 class="mb-4 custom-green">Wami Info</h4>
-                        <p class="mb-4 text-secondary flex-grow-1">Capacity building and vital information for resilient farming.</p>
-                        <a asp-controller="Home" asp-action="WamiInfo" class="fw-bold text-decoration-none custom-green-link mt-auto">
-                            Learn More
-                            <i class="bi bi-arrow-right-short"></i>
-                        </a>
-                    </div>
-                </div>
+        <!-- Service: Wami Credit -->
+        <div class="service-row flex-md-row-reverse">
+            <!-- Image Column -->
+            <div class="col-12 col-md-6 service-image">
+                <img src="@Url.Content("~/assets/images/pukpara/wami-credit.jpg")" alt="Wami Credit" class="img-fluid rounded" style="border-radius: 5px;">
+            </div>
+            <!-- Text Column -->
+            <div class="col-12 col-md-6 service-text service-content">
+                <h4 class="mb-4 custom-green">Wami Credit</h4>
+                <p class="mb-4 text-secondary flex-grow-1 text-justify">
+                    We supply farmers with seeds, fertilizer, and mechanization services for production on credit to be paid during harvest. WamiAgro takes repayment of this input credit via the commercial sales of a farmer’s crop.
+                </p>
+                @* <a asp-controller="Home" asp-action="WamiCredit" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                    Learn More
+                    <i class="bi bi-arrow-right-short"></i>
+                </a> *@
+            </div>
+        </div>
+
+        <!-- Service: Wami Info -->
+        <div class="service-row">
+            <!-- Image Column -->
+            <div class="col-12 col-md-6 service-image">
+                <img src="@Url.Content("~/assets/images/pukpara/wami-info.png")" alt="Wami Info" class="img-fluid rounded" style="border-radius: 5px;">
+            </div>
+            <!-- Text Column -->
+            <div class="col-12 col-md-6 service-text service-content">
+                <h4 class="mb-4 custom-green">Wami Info</h4>
+                <p class="mb-4 text-secondary flex-grow-1 text-justify">
+                    We provide capacity building for farmers through a series of Good Agricultural Practices (GAP) training, financial literacy training, and also provide important weather updates in local dialects to farmers to help improve their long-term resilience, even in changing climates.
+                </p>
+                @* <a asp-controller="Home" asp-action="WamiInfo" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                    Learn More
+                    <i class="bi bi-arrow-right-short"></i>
+                </a> *@
             </div>
         </div>
     </div>
