@@ -1,7 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <!--====== BANNER PART START ======-->
 <section class="banner-area">
     <div class="banner-item bg_cover" style="background-image: url(https://wamiagro.com/static/media/csl2.01c37ff3.jpg)">
@@ -51,9 +52,71 @@
 </section>
 
 
-@{
-    Html.RenderPartial("_services");
-}
+<section class="bg-light py-5 py-xl-8">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+                <h2 class="title">Our Services</h2>
+
+                <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+            </div>
+        </div>
+    </div>
+
+    <div class="container overflow-hidden">
+        <!-- Center the cards -->
+        <div class="row gy-4 gy-xl-0 justify-content-center align-items-stretch">
+            <!-- Service Card: Wami Market -->
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card h-100 border-0 border-bottom custom-green-border shadow-sm">
+                    <div class="card-body text-center p-4 p-xxl-5 d-flex flex-column services-card-body">
+                        <!-- Icon -->
+                        <i class="bi bi-shop services-icon mb-4"></i>
+                        <h4 class="mb-4 custom-green">Wami Market</h4>
+                        <p class="mb-4 text-secondary flex-grow-1">Reliable market access with fair prices for your produce.</p>
+                        <a href="https://market.wamiagro.com/" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                            Learn More
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card: Wami Credit -->
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card h-100 border-0 border-bottom custom-green-border shadow-sm">
+                    <div class="card-body text-center p-4 p-xxl-5 d-flex flex-column services-card-body">
+                        <!-- Icon -->
+                        <i class="bi bi-credit-card services-icon mb-4"></i>
+                        <h4 class="mb-4 custom-green">Wami Credit</h4>
+                        <p class="mb-4 text-secondary flex-grow-1">Access seeds, fertilizer, and mechanization services on credit.</p>
+                        @* <a asp-controller="Home" asp-action="WamiCredit" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                            Learn More
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a> *@
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card: Wami Info -->
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card h-100 border-0 border-bottom custom-green-border shadow-sm">
+                    <div class="card-body text-center p-4 p-xxl-5 d-flex flex-column services-card-body">
+                        <!-- Icon -->
+                        <i class="bi bi-info-circle services-icon mb-4"></i>
+                        <h4 class="mb-4 custom-green">Wami Info</h4>
+                        <p class="mb-4 text-secondary flex-grow-1">Capacity building and vital information for resilient farming.</p>
+                        @* <a asp-controller="Home" asp-action="WamiInfo" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                            Learn More
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a> *@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
       <div class="container">
 <div class="features-counter-area">
@@ -109,26 +172,34 @@
                     <div class="row features-active">
                         <div class="col-lg-6">
                             <div class="features-box text-center mt-30">
-                                <i class="flaticon-pumpkin"></i>
-                                <h5 class="title">Organic Food</h5>
-                                <p>Providing high-quality organic food products to ensure health and sustainability.</p>
-                                <a href="#" data-toggle="modal" data-target="#organicFoodModal">read more</a>
+                                <img src="assets/images/blog1.jpg" alt="blog">
+                                <h5 class="title">31 July 2024</h5>
+                                <p>10 promising agribusinesses awarded US$10,000 each to expand operations</p>
+                                <a href="https://thebftonline.com/2024/07/31/10-promising-agribusinesses-awarded-us10000-each-to-expand-operations/" target="_blank" data-toggle="modal" data-target="#organicFoodModal">read more</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="features-box text-center mt-30">
-                                <i class="flaticon-rice"></i>
-                                <h5 class="title">Safe & Trusty</h5>
-                                <p>Ensuring safety and trust in all our agricultural practices and products.</p>
-                                <a href="#" data-toggle="modal" data-target="#safeTrustyModal">read more</a>
+                                <img src="assets/images/june14.png" alt="blog">
+                                <h5 class="title">14 June 2024</h5>
+                                <p>Mirepa Investment Advisors closes an investment with Wami Agro Limited</p>
+                                <a href="https://mirepaadvisors.com/mirepa-investment-advisors-closes-an-investment-with-wami-agro-limited/" data-toggle="modal" data-target="#safeTrustyModal">read more</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="features-box text-center mt-30">
-                                <i class="flaticon-agriculture-1"></i>
-                                <h5 class="title">Agricultural</h5>
-                                <p>Supporting agricultural advancements through innovative solutions and support.</p>
-                                <a href="#" data-toggle="modal" data-target="#agriculturalModal">read more</a>
+                                <img src="assets/images/blog4.png" "Blog 4" />
+                                <h5 class="title">13 Sept 2023</h5>
+                                <p>Digital tech supports smallholder farmers in Ghana</p>
+                                <a target="_blank" href="https://springwise.com/innovation/agriculture-energy/digital-tech-supports-smallholder-farmers-in-ghana/" data-toggle="modal" data-target="#agriculturalModal">read more</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="features-box text-center mt-30">
+                                <img src="assets/images/blog-1.jpg" "Blog 4" />
+                                <h5 class="title">2 August 2022</h5>
+                                <p>Impact investment, Agric firm partner to support local rice farmers</p>
+                                <a href="https://gna.org.gh/2022/08/impact-investment-agric-firm-partner-to-support-local-rice-farmers-2/" data-toggle="modal" data-target="#agriculturalModal">read more</a>
                             </div>
                         </div>
                     </div>
@@ -452,6 +523,54 @@
 <!--====== FEEDBACK 3 PART ENDS ======-->
 <!--====== Custom CSS for What We Do and Partners Sections ======-->
 <style>
+
+ .custom-green {
+        color: #6cbe03 !important;
+    }
+
+    .custom-green-border {
+        border-bottom: 3px solid #6cbe03 !important;
+    }
+
+    .custom-green-link {
+        color: #6cbe03 !important;
+    }
+
+        .custom-green-link:hover {
+            color: #558e02 !important; /* Darker shade for hover effect */
+            text-decoration: underline;
+        }
+
+    /* Ensure all cards have equal heights */
+    .services-item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /* Flexbox for equal heights */
+    .services-card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+        /* Adjust the paragraph to grow and fill space */
+        .services-card-body p {
+            flex-grow: 1;
+        }
+
+    /* Adjust icon size and color */
+    .services-icon {
+        font-size: 56px;
+        color: #6cbe03;
+    }
+
+    /* Ensure the section title uses the custom green */
+    .section-title .fs-6 {
+        color: #6cbe03;
+    }
+
     /* Ensure all service images have the same dimensions */
     .services-image {
         width: 100%; /* Ensures all images fill the container */
