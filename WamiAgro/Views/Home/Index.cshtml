@@ -56,7 +56,7 @@
     <div class="container">
         <!-- Section Title -->
         <div class="row justify-content-md-center">
-            <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 " >
                 <h2 class="title">Our Services</h2>
 
                 <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
@@ -75,7 +75,7 @@
                         <i class="bi bi-shop services-icon mb-4"></i>
                         <h4 class="mb-4 custom-green">Wami Market</h4>
                         <p class="mb-4 text-secondary flex-grow-1">Reliable market access with fair prices for your produce.</p>
-                        <a href="https://market.wamiagro.com/" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                        <a href="https://market.wamiagro.com/" target="_blank" class="fw-bold text-decoration-none custom-green-link mt-auto">
                             Learn More
                             <i class="bi bi-arrow-right-short"></i>
                         </a>
@@ -91,10 +91,10 @@
                         <i class="bi bi-credit-card services-icon mb-4"></i>
                         <h4 class="mb-4 custom-green">Wami Credit</h4>
                         <p class="mb-4 text-secondary flex-grow-1">Access seeds, fertilizer, and mechanization services on credit.</p>
-                        @* <a asp-controller="Home" asp-action="WamiCredit" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                        <a asp-controller="Home" asp-action="WamiCredit" class="fw-bold text-decoration-none custom-green-link mt-auto">
                             Learn More
                             <i class="bi bi-arrow-right-short"></i>
-                        </a> *@
+                        </a>
                     </div>
                 </div>
             </div>
@@ -107,10 +107,12 @@
                         <i class="bi bi-info-circle services-icon mb-4"></i>
                         <h4 class="mb-4 custom-green">Wami Info</h4>
                         <p class="mb-4 text-secondary flex-grow-1">Capacity building and vital information for resilient farming.</p>
-                        @* <a asp-controller="Home" asp-action="WamiInfo" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                        <a  
+                        asp-controller="Home" asp-action="WhatWeDo" 
+                        class="fw-bold text-decoration-none custom-green-link mt-auto">
                             Learn More
                             <i class="bi bi-arrow-right-short"></i>
-                        </a> *@
+                        </a>
                     </div>
                 </div>
             </div>
@@ -156,50 +158,50 @@
 
 <!--====== BANNER PART ENDS ======-->
 <!--====== FEATURES PART START ======-->
-<section class="features-area pt-130 pb-130">
+<section class="features-area pt-130 pb-130" style="height: fit-content;">
 
-    <div class="container">
-        <div class="row align-items-center">
+    <div class="container" style="height: max-content;">
+        <div class="row align-items-center" style="height: max-content;">
             <div class="col-lg-6">
                 <div class="features-thumb">
                     <img src="https://wamiagro.com/static/media/101.ad499279.jpg" alt="features">
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="features-content">
+            <div class="col-lg-6" style="height: 100%;">
+                <div class="features-content" style="height: 100%;">
                     <span>Our Resources</span>
                     @* <h3 class="title">We Are Best For Your Foods Partners</h3> *@
-                    <div class="row features-active">
-                        <div class="col-lg-6">
+                    <div class="row features-active" style="height: 100%; padding: 0;">
+                        <div class="col-lg-6" style="height: 100%;">
                             <div class="features-box text-center mt-30">
-                                <img src="assets/images/blog1.jpg" alt="blog">
+                                <img src="assets/images/blog1.jpg" style="margin: auto;" alt="blog" height="100">
                                 <h5 class="title">31 July 2024</h5>
                                 <p>10 promising agribusinesses awarded US$10,000 each to expand operations</p>
-                                <a href="https://thebftonline.com/2024/07/31/10-promising-agribusinesses-awarded-us10000-each-to-expand-operations/" target="_blank" data-toggle="modal" data-target="#organicFoodModal">read more</a>
+                                <a href="https://thebftonline.com/2024/07/31/10-promising-agribusinesses-awarded-us10000-each-to-expand-operations/" target="_blank">read more</a>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" style="height: 100%;">
                             <div class="features-box text-center mt-30">
-                                <img src="assets/images/june14.png" alt="blog">
+                                <img src="assets/images/june14.png" alt="blog" height="100" style="margin: auto;">
                                 <h5 class="title">14 June 2024</h5>
                                 <p>Mirepa Investment Advisors closes an investment with Wami Agro Limited</p>
-                                <a href="https://mirepaadvisors.com/mirepa-investment-advisors-closes-an-investment-with-wami-agro-limited/" data-toggle="modal" data-target="#safeTrustyModal">read more</a>
+                                <a href="https://mirepaadvisors.com/mirepa-investment-advisors-closes-an-investment-with-wami-agro-limited/">read more</a>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" style="height: 100%;">
                             <div class="features-box text-center mt-30">
-                                <img src="assets/images/blog4.png" "Blog 4" />
+                                <img src="assets/images/blog4.png" height="100" style="margin: auto;" alt="Blog 4" />
                                 <h5 class="title">13 Sept 2023</h5>
                                 <p>Digital tech supports smallholder farmers in Ghana</p>
-                                <a target="_blank" href="https://springwise.com/innovation/agriculture-energy/digital-tech-supports-smallholder-farmers-in-ghana/" data-toggle="modal" data-target="#agriculturalModal">read more</a>
+                                <a target="_blank" href="https://springwise.com/innovation/agriculture-energy/digital-tech-supports-smallholder-farmers-in-ghana/">read more</a>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" style="height: 100%;">
                             <div class="features-box text-center mt-30">
-                                <img src="assets/images/blog-1.jpg" "Blog 4" />
+                                <img src="assets/images/blog-1.jpg" height="100" style="margin: auto;" alt="Blog 4" />
                                 <h5 class="title">2 August 2022</h5>
                                 <p>Impact investment, Agric firm partner to support local rice farmers</p>
-                                <a href="https://gna.org.gh/2022/08/impact-investment-agric-firm-partner-to-support-local-rice-farmers-2/" data-toggle="modal" data-target="#agriculturalModal">read more</a>
+                                <a href="https://gna.org.gh/2022/08/impact-investment-agric-firm-partner-to-support-local-rice-farmers-2/">read more</a>
                             </div>
                         </div>
                     </div>
