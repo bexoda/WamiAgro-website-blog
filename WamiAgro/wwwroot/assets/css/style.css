@@ -6343,7 +6343,7 @@ Search Overlay CSS
 }
 
 .footer-area .footer-content {
-    margin-top: 30px;
+    margin-top: 1rem;
 }
 
     .footer-area .footer-content .title {
@@ -6536,7 +6536,7 @@ Search Overlay CSS
 
 .footer-area .footer-copyright {
     background: #111;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
     .footer-area .footer-copyright .footer-copyright-content {
