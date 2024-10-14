@@ -56,7 +56,7 @@
     <div class="container">
         <!-- Section Title -->
         <div class="row justify-content-md-center">
-            <div class="col-12 col-md-10 col-lg-8 col-xl-7 " >
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 ">
                 <h2 class="title">Our Services</h2>
 
                 <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
@@ -91,7 +91,7 @@
                         <i class="bi bi-credit-card services-icon mb-4"></i>
                         <h4 class="mb-4 custom-green">Wami Credit</h4>
                         <p class="mb-4 text-secondary flex-grow-1">Access seeds, fertilizer, and mechanization services on credit.</p>
-                        <a asp-controller="Home" asp-action="WamiCredit" class="fw-bold text-decoration-none custom-green-link mt-auto">
+                        <a asp-controller="Home" asp-action="WhatWeDo" asp-fragment="wami_credit" class="fw-bold text-decoration-none custom-green-link mt-auto">
                             Learn More
                             <i class="bi bi-arrow-right-short"></i>
                         </a>
@@ -107,9 +107,8 @@
                         <i class="bi bi-info-circle services-icon mb-4"></i>
                         <h4 class="mb-4 custom-green">Wami Info</h4>
                         <p class="mb-4 text-secondary flex-grow-1">Capacity building and vital information for resilient farming.</p>
-                        <a  
-                        asp-controller="Home" asp-action="WhatWeDo" 
-                        class="fw-bold text-decoration-none custom-green-link mt-auto">
+                        <a asp-controller="Home" asp-action="WhatWeDo" asp-fragment="wami_info"
+                           class="fw-bold text-decoration-none custom-green-link mt-auto">
                             Learn More
                             <i class="bi bi-arrow-right-short"></i>
                         </a>
@@ -120,41 +119,41 @@
     </div>
 </section>
 
-      <div class="container">
-<div class="features-counter-area">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="features-counter mt-30 text-center text-sm-left">
-                        <span>Small Holder Farmers</span>
-                        <h3 class="title counter">14000</h3>And Counting
-                        <i class="far fa-users"></i>
-                    </div>
+<div class="container">
+    <div class="features-counter-area">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="features-counter mt-30 text-center text-sm-left">
+                    <span>Small Holder Farmers</span>
+                    <h3 class="title counter">14000</h3>And Counting
+                    <i class="far fa-users"></i>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="features-counter item-2 mt-30 text-center text-sm-left">
-                        <span>Region</span>
-                        <h3 class="title counter">6</h3>
-                        <i class="far fa-leaf"></i>
-                    </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="features-counter item-2 mt-30 text-center text-sm-left">
+                    <span>Region</span>
+                    <h3 class="title counter">6</h3>
+                    <i class="far fa-leaf"></i>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="features-counter item-3 mt-30 text-center text-sm-left">
-                        <span>Aggregators</span>
-                        <h3 class="title counter">50</h3>And Counting
-                        <i class="far fa-trophy-alt"></i>
-                    </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="features-counter item-3 mt-30 text-center text-sm-left">
+                    <span>Aggregators</span>
+                    <h3 class="title counter">50</h3>And Counting
+                    <i class="far fa-trophy-alt"></i>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="features-counter item-4 mt-30 text-center text-sm-left">
-                        <span>Grains Produced & Sold</span>
-                        <h3 class="title counter">5000</h3>And Counting
-                        <i class="far fa-coffee"></i>
-                    </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="features-counter item-4 mt-30 text-center text-sm-left">
+                    <span>Grains Produced & Sold</span>
+                    <h3 class="title counter">5000</h3>And Counting
+                    <i class="far fa-coffee"></i>
                 </div>
             </div>
         </div>
     </div>
-        
+</div>
+
 
 <!--====== BANNER PART ENDS ======-->
 <!--====== FEATURES PART START ======-->
@@ -210,7 +209,6 @@
         </div>
 
         <!-- Features Counters -->
-
         <!-- End of Features Counters -->
     </div>
 </section>
@@ -526,7 +524,7 @@
 <!--====== Custom CSS for What We Do and Partners Sections ======-->
 <style>
 
- .custom-green {
+    .custom-green {
         color: #6cbe03 !important;
     }
 

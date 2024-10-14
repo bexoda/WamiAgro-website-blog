@@ -19,10 +19,10 @@
         color: #6cbe03 !important;
     }
 
-    .custom-green-link:hover {
-        color: #558e02 !important; /* Darker shade for hover effect */
-        text-decoration: underline;
-    }
+        .custom-green-link:hover {
+            color: #558e02 !important; /* Darker shade for hover effect */
+            text-decoration: underline;
+        }
 
     /* Ensure all service rows have equal heights */
     .service-row {
@@ -49,16 +49,20 @@
         color: #6cbe03;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
     /* Responsive adjustments */
     @@media (max-width: 767.98px) {
         .service-row {
             flex-direction: column;
             text-align: center;
         }
-        .service-row .service-image,
-        .service-row .service-text {
-            text-align: center;
-        }
+
+            .service-row .service-image,
+            .service-row .service-text {
+                text-align: center;
+            }
     }
 </style>
 
@@ -86,9 +90,8 @@
                 <p class="mb-4 text-secondary flex-grow-1 text-justify">
                     WamiAgro provides reliable market access with fair prices by buying from various smallholders and selling in bulk to factories, distributors, and retailers both locally and for export. Our customers receive a fully traceable product that is grown with biodiverse, regenerative methods that enrich local environments.
                 </p>
-                <a 
-                href="https://market.wamiagro.com/" 
-                class="fw-bold text-decoration-none custom-green-link mt-auto">
+                <a href="https://market.wamiagro.com/"
+                   class="fw-bold text-decoration-none custom-green-link mt-auto">
                     Learn More
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
@@ -96,7 +99,7 @@
         </div>
 
         <!-- Service: Wami Credit -->
-        <div class="service-row flex-md-row-reverse">
+        <div class="service-row flex-md-row-reverse" id="wami_credit">
             <!-- Image Column -->
             <div class="col-12 col-md-6 service-image">
                 <img src="@Url.Content("~/assets/images/pukpara/wami-credit.jpg")" alt="Wami Credit" class="img-fluid rounded" style="border-radius: 5px;">
@@ -108,8 +111,8 @@
                     We supply farmers with seeds, fertilizer, and mechanization services for production on credit to be paid during harvest. WamiAgro takes repayment of this input credit via the commercial sales of a farmer’s crop.
                 </p>
                 @* <a asp-controller="Home" asp-action="WamiCredit" class="fw-bold text-decoration-none custom-green-link mt-auto">
-                    Learn More
-                    <i class="bi bi-arrow-right-short"></i>
+                Learn More
+                <i class="bi bi-arrow-right-short"></i>
                 </a> *@
             </div>
         </div>
@@ -127,8 +130,8 @@
                     We provide capacity building for farmers through a series of Good Agricultural Practices (GAP) training, financial literacy training, and also provide important weather updates in local dialects to farmers to help improve their long-term resilience, even in changing climates.
                 </p>
                 @* <a asp-controller="Home" asp-action="WamiInfo" class="fw-bold text-decoration-none custom-green-link mt-auto">
-                    Learn More
-                    <i class="bi bi-arrow-right-short"></i>
+                Learn More
+                <i class="bi bi-arrow-right-short"></i>
                 </a> *@
             </div>
         </div>
